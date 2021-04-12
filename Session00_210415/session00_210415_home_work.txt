@@ -1,0 +1,34 @@
+To be done at 22/04/2020 04:00 pm
+
+Pure Date:
+
+1. Create a PD-Patch and build a simple amplitude modulation. 
+2. What is the difference between tilde- and non-tilde-objects? Tell us two of them!
+
+C-coding:
+07: What is '985824 % 23471'?
+
+08: Read about "call by value" and "call by reference" in your favorite C programming book and explain the difference!
+
+09: Write a function that takes two pointers to a long number as parameter and returns a long result after a modulo operation!
+
+10: Rewrite the func 'print_array(int *arr, int length)' using ptr instead of arr[i]! Tip: Use ptr++ to step forward and *ptr 
+    for dereferencing together.
+
+11: Complete the missing parameters for biquad_01 through biquad_05 with realistic values for lowpass, highpass, bandpass, 
+    notch and peak filters! Tip: Take a look at: https://www.earlevel.com/main/2013/10/13/biquad-calculator-v2/.x
+
+12: 1. For holding filter parameters (such as a0, a1, a2, b1, b2), would you use a struct or an union?
+    2. For holding filter types (like high_shelf_, low_pass ect.), would you use a struct or an union?
+    Tip: Think about how the variables will be used at the same time?
+
+13: 1. Write a function 'void resetFilter(biquad_t *filter)' that sets all struct members to zero!
+    2. Call this function at the end of main(), put &high_shelf as parameter into it and print the filter coeffcients!
+
+14: Write a function 'printFilterType(enum Filters *filter)' that prints the filter type instead of the enum number!
+    Tip: Use the 'switch' statement!
+
+15: Expand the 'void printParameters(biquad_t *filter)' from 08_typedefs.c in such a way that it also outputs the filter state  
+    and the filter type!
+
+(The numbers correspond to the C files in this git)
