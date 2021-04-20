@@ -1,27 +1,28 @@
 // 14_enums.c
+// http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html
 
 #include <stdio.h>
 
 // Enumerations
 enum Filters {
-   bq_type_lowpass = 0,
-   bq_type_highpass,
-   bq_type_bandpass,
-   bq_type_notch,
-   bq_type_peak,
-   bq_type_lowshelf,
-   bq_type_highshelf
+    BQ_TYPE_LOWPASS = 0,
+    BQ_TYPE_HIGHPASS,
+    BQ_TYPE_BANDPASS,
+    BQ_TYPE_NOTCH,
+    BQ_TYPE_PEAK,
+    BQ_TYPE_LOWSHELF,
+    BQ_TYPE_HIGHSHELF
 };
 
-enum states {
-   active_mode,
-   stand_by_mode,
-   edit_mode,
+enum States {
+    ACTIVE_MODE,
+    STAND_BY_MODE,
+    EDIT_MODE,
 };
 
 
 int main() {
-   enum Filters currentFilter = bq_type_highshelf;
+   enum Filters currentFilter = BQ_TYPE_HIGHSHELF;
    printf("currentFilter: %d\n", currentFilter);
 
    return 0;
@@ -35,31 +36,31 @@ Tip: Use the 'switch' statement!
 void printFilterType(enum Filters *filter) {
 	switch(*filter) {
 		case 0:
-		printf("bq_type_lowpass");
+		printf("BQ_TYPE_LOWPASS");
 		break;
 		
 		case 1:
-		printf("bq_type_highpass");
+		printf("BQ_TYPE_HIGHPASS");
 		break;
 		
 		case 2:
-		printf("bq_type_bandpass");
+		printf("BQ_TYPE_BANDPASS");
 		break;
 		
 		case 3:
-		printf("bq_type_notch");
+		printf("BQ_TYPE_NOTCH");
 		break;
 		
 		case 4:
-		printf("bq_type_peak");
+		printf("BQ_TYPE_PEAK");
 		break;
 		
 		case 5:
-		printf("bq_type_lowshelf");
+		printf("BQ_TYPE_LOWSHELF");
 		break;
 		
 		case 6:
-		printf("bq_type_highshelf");
+		printf("BQ_TYPE_HIGHSHELF");
 		break;
 		
 		default: printf("that should not happen, filter not defined.");

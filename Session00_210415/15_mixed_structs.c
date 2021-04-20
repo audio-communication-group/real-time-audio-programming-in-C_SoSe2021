@@ -1,29 +1,33 @@
 // 15_mixed_structs.c
+// http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html
+
 
 #include <stdio.h>
 
-// Enumeration
+// Enumerations
 enum States {
-    active_mode = 0,
-    standby_mode,
-    edit_mode,
-} state;
+    ACTIVE_MODE,
+    STAND_BY_MODE,
+    EDIT_MODE,
+};
 
 //// This can also be made to a type_t
 // typedef enum States {
-//     active_mode = 0,
-//     standby_mode,
-//     edit_mode,
+	// ACTIVE_MODE,
+	// STAND_BY_MODE,
+	// EDIT_MODE,
 // } state_t;
 
+
+
 typedef enum Filters {
-  bq_type_lowpass = 0,
-  bq_type_highpass,
-  bq_type_bandpass,
-  bq_type_notch,
-  bq_type_peak,
-  bq_type_lowshelf,
-  bq_type_highshelf
+    BQ_TYPE_LOWPASS = 0,
+    BQ_TYPE_HIGHPASS,
+    BQ_TYPE_BANDPASS,
+    BQ_TYPE_NOTCH,
+    BQ_TYPE_PEAK,
+    BQ_TYPE_LOWSHELF,
+    BQ_TYPE_HIGHSHELF
 } filter_t;
 
 // Typedef structure
@@ -53,15 +57,15 @@ void printAllFilterParams(biquad_t *filter);
 
 int main() {
   biquad_t currentFilter;
-  currentFilter.state = edit_mode;
-  currentFilter.type = bq_type_lowshelf;
+  currentFilter.state = EDIT_MODE;
+  currentFilter.type = BQ_TYPE_LOWSHELF;
   printf("currentFilter.type: %d\n", currentFilter.type);
   printf("currentFilter.state: %d\n", currentFilter.state);
   
   // Lowpass
   biquad_t homeworkFilter;
-  homeworkFilter.state = standby_mode;
-  homeworkFilter.type = bq_type_lowpass;
+  homeworkFilter.state = STAND_BY_MODE;
+  homeworkFilter.type = BQ_TYPE_LOWPASS;
   homeworkFilter.fs = 441000;		// Sample rate	
   homeworkFilter.fc = 10000; 		// Hz
   homeworkFilter.q = 0.7071; 		// Q
@@ -83,20 +87,21 @@ void printState(biquad_t *filter) {
   //*state is just a number
   //printf("%d\n",filter->state);
   switch(filter->state) {
-    case active_mode:
-    printf("active_mode");
+	printf("State: ");
+    case ACTIVE_MODE:
+    printf("ACTIVE_MODE");
     break;
 
-    case standby_mode:
-    printf("standby_mode");
+    case STAND_BY_MODE:
+    printf("STAND_BY_MODE");
     break;
 
-    case edit_mode:
-    printf("edit_mode");
+    case EDIT_MODE:
+    printf("EDIT_MODE");
     break;
 	  
     default:
-    printf("undefined state");
+    printf("undefined");
     break;
   }
 }
@@ -114,16 +119,16 @@ void printAllFilterParams(biquad_t *filter) {
 	
 	printf("\n");
     switch(filter->state) {
-      case active_mode:
-      printf("active_mode");
+      case ACTIVE_MODE:
+      printf("ACTIVE_MODE");
       break;
 
-      case standby_mode:
-      printf("standby_mode");
+      case STAND_BY_MODE:
+      printf("STAND_BY_MODE");
       break;
 
-      case edit_mode:
-      printf("edit_mode");
+      case EDIT_MODE:
+      printf("EDIT_MODE");
       break;
 	  
       default:
@@ -133,32 +138,32 @@ void printAllFilterParams(biquad_t *filter) {
 	
 	printf("\n");
 	switch(filter->type) {
-		case bq_type_lowpass:
-		printf("bq_type_lowpass");
+		case BQ_TYPE_LOWPASS:
+		printf("BQ_TYPE_LOWPASS");
 		break;
 		
-		case bq_type_highpass:
-		printf("bq_type_highpass");
+		case BQ_TYPE_HIGHPASS:
+		printf("BQ_TYPE_HIGHPASS");
 		break;
 		
-		case bq_type_bandpass:
-		printf("bq_type_bandpass");
+		case BQ_TYPE_BANDPASS:
+		printf("BQ_TYPE_BANDPASS");
 		break;
 		
-		case bq_type_notch:
-		printf("bq_type_notch");
+		case BQ_TYPE_NOTCH:
+		printf("BQ_TYPE_NOTCH");
 		break;
 		
-		case bq_type_peak:
-		printf("bq_type_peak");
+		case BQ_TYPE_PEAK:
+		printf("BQ_TYPE_PEAK");
 		break;
 		
-		case bq_type_lowshelf:
-		printf("bq_type_lowshelf");
+		case BQ_TYPE_LOWSHELF:
+		printf("BQ_TYPE_LOWSHELF");
 		break;
 		
-		case bq_type_highshelf:
-		printf("bq_type_highshelf");
+		case BQ_TYPE_HIGHSHELF:
+		printf("BQ_TYPE_HIGHSHELF");
 		break;
 		
 		default: printf("that should not happen, filter not defined.");

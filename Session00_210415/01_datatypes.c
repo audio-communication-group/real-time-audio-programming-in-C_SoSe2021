@@ -1,3 +1,5 @@
+// http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <limits.h>

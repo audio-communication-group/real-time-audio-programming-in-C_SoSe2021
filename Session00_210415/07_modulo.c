@@ -1,3 +1,5 @@
+// http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html
+
 // 07_modulo.c
 
 #include <stdio.h>

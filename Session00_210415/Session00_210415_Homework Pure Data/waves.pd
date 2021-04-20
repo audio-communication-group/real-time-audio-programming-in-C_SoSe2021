@@ -1,0 +1,16 @@
+#N canvas 616 106 797 519 10;
+#X obj 216 10 lfo~;
+#X obj 27 129 noise~;
+#X obj 27 191 *~;
+#X obj 27 265 dac~;
+#X obj 194 245 grapher~;
+#X obj 27 227 lop~ \$0;
+#X text 14 492 Hillerson "Programming Sound With Pure Data" \, 2014
+;
+#X connect 0 0 2 1;
+#X connect 0 1 5 1;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 5 0 3 0;
+#X connect 5 0 3 1;
+#X connect 5 0 4 0;

@@ -1,3 +1,5 @@
+// http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html
+
 // 09_ptr_as_func_param.c
 
 #include <stdio.h>

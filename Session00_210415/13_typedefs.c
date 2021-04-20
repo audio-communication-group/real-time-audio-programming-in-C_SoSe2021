@@ -1,4 +1,5 @@
 // 13_typedefs.c
+// http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html
 
 #include <stdio.h>
 
@@ -30,7 +31,6 @@ int main() {
 
     // Initialisation of all struct members
     biquad_t high_shelf = {44100.0, 10000.0, 0.7071, 6.0, 1.505212, -0.842049, 0.342357, -0.171241, 0.176761};
-    
     // Show parameters
     printParameters(&high_shelf);
     

@@ -1,3 +1,5 @@
+// http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html
+
 // 10_ptr_and_arrays.c
 
 #include <stdio.h>
