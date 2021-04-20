@@ -1,4 +1,4 @@
-To be done at 30/05/2020 04:00 pm
+
 
 Pure Date:
 
@@ -9,7 +9,7 @@ C-coding:
 16: Implement the function "what_to_do" with if-statements only.
 
 
-17: Move the variable j to the file 17_StaticExternGlobalVar.c and access it in main.c with the keyword extern.
+17: Move the variable j to the file 17_static_extern_global_var.c and access it in main.c with the keyword extern.
 
 
 18: Write thePermanentHeap() function with pointer arithmetic instead of the array index access method:      *aHeapPointer++ = i;
