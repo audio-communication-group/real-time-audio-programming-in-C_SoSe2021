@@ -1,6 +1,4 @@
-
-
-Pure Date:
+Pure Data:
 
 1. Create a PD-Patch and build a simple FM Synthesis
 
@@ -16,14 +14,9 @@ C-coding:
     In the main function print out all values instead of the index 4 only. Be careful what you return in thePermanentHeap() function!
 
 
-19: Write a function that allocates memory for
-// integers with calloc and returns the allocated
-// memory as an int pointer.
-// The function should have two int arguments:
-// the number of integers to allocate, and a
-// default value. Every int field of the allocated memory
-// should be initialized with this default value.
-// call this function from main instead of calling calloc
-// directly.
+19: Write a function that allocates memory for integers with calloc and returns the allocated memory as an int pointer.
+	The function should have two int arguments:
+	the number of integers to allocate, and a default value. Every int field of the allocated memory should be initialized with this 	default value.	
+	Call this function from main instead of calling calloc directly.
 
-(The numbers correspond to the C files in this git and our repl.it)
+
