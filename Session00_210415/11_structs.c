@@ -25,10 +25,13 @@ int main() {
 
     struct Biquad biquad_05 = {441000, 8000 };
     biquad_05.q = 0.7071;
-    
+	
     printf("biquad_05: %f,%.1f,%.1f,%.1f\n", biquad_05.fs, biquad_05.fc, biquad_05.q, biquad_05.gain);
     // Auto initialized: 0 for integers, 0.0 for floating-point, and NULL for pointers
     
+	// In (ANSI) C99, you can use a designated initializer to initialize a structure:
+	struct Biquad biquad_06 = {.fs=48000, .fc=10000 };
+	printf("biquad_06: %f,%.1f,%.1f,%.1f\n", biquad_06.fs, biquad_06.fc, biquad_06.q, biquad_06.gain);
     return 0;
 }
 
