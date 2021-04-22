@@ -1,5 +1,6 @@
 # System
 .DS_Store
+~$*.docx
 
 # Prerequisites
 *.d
