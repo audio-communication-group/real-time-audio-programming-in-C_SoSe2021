@@ -30,8 +30,6 @@ void *thePermanentHeap()
 
 int main()
 {
-    theImpermanenceOfTheStack();
-
     int *ptr = (int *) thePermanentHeap();
     if(ptr != NULL)
     {

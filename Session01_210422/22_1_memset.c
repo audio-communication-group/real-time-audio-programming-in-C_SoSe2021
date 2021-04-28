@@ -15,6 +15,10 @@ void fillWithMemset()
   printf("\nBefore memset(): %s\n", str);
 
   // Fill 8 characters starting from str[13] with '.'
+  // memset(start_pointer, var, var_count * sizeof(var))
+  // Example: 
+  // int arr[5] = {1,2,3,4,5};
+  // memset(arr + 2, 0, 2*sizeof(int));
   memset(str + 10, '.', 5*sizeof(char));
 
   printf("After memset():  %s", str);

@@ -14,6 +14,7 @@ int main()
     printf("Enter number of elements: ");
     scanf("%d", &n);
     
+	// Calloc inits with zero
     ptr = (int*) calloc(n, sizeof(int));
     
     // Before writing to the memory

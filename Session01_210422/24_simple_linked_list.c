@@ -20,7 +20,7 @@ typedef struct Node {
     struct Node *next;
 } node_t;
 
-typedef node_t *p_node_t;
+typedef node_t* p_node_t;
 p_node_t g_p_head;
 
 // Function declaration
@@ -113,7 +113,7 @@ void insert_node(p_node_t new_node)
 void new_node(void)
 {
     // Allocate the memory for a new node from heap
-    p_node_t new_node = malloc(sizeof(node_t));
+    p_node_t new_node = (node_t*) malloc(sizeof(node_t));
     // Catch possible memory error, but this will probably never happen
     if (new_node == NULL) {
         printf("No memory!?\n");

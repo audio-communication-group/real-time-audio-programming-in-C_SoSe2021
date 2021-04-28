@@ -5,8 +5,11 @@
 // https://en.wikibooks.org/wiki/C_Programming/Variables
 // http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html
 
+// gcc -o my_file 17_static_extern.c
+// ./my_file
 
 #include <stdio.h>
+#include "17_static_extern_global_var.h"
 
 static int j = 0; // j can only be accessed in this file, a global variable without the
 //keyword static could also be accessed in other .c files. In order to use it in another file

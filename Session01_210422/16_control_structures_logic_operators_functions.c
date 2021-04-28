@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdbool.h>
+#include "17_static_"
 
 // Global variables
 bool sunshine = false;
@@ -27,7 +28,7 @@ typedef enum Activities {
 void print_what_to_do(activities_t x);
 
 int main() {
-
+	// Declaration struct
     activities_t to_do_today;
 
     // if - else

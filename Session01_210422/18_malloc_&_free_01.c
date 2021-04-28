@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
 
     ptr = (int*) malloc(n * sizeof(int));
 
+
     // Before writing to the memory
     for (int i=0; i<n; i++) {
         printf("memory initialized with %d\taddress: %p\n", *(ptr+i), (ptr+i));

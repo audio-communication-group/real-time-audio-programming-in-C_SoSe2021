@@ -1,0 +1,11 @@
+Pure Data:
+
+1. Create a PD-Patch and build a simple additive synthesis with a base tone and a small number of related overtones. 
+
+C-coding:
+1. Install the GNU C-Compiler gcc, compile a linked list C-file and run the binary in terminal!
+2. Take a look at the comments in example 27 because doxygen style is expected for your future project work. Install Doxygen on your computer and read an introduction. http://www.doxygen.nl/
+3. Write the function "void insert_node(p_node_t new_node)" in 26_simple_circular_linked_list.c!
+
+4. In Example 27_double_circular_linked_list.c: Implement a new sort func "sort_list" where the pointers are changed, instead of the data!
+
