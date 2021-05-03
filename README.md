@@ -1,4 +1,4 @@
-# Attention: Due to the failure of the TU-IT, the zoom link will be published at this point this week, if the infrastructure is not functional again by Thursday. Until then, happy coding! 
+# Attention: Due to the failure of the TU-IT, the zoom link will be published here this week, if the infrastructure is not functional again by Thursday. Until then, happy coding! 
 
 
 
