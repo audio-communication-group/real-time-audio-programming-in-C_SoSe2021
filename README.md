@@ -1,3 +1,7 @@
+# Attention: Due to the failure of the TU-IT, the zoom link will be published at this point this week, if the infrastructure is not functional again by Thursday. Until then, happy coding! 
+
+
+
 # Real-Time Audio Programming In C
 Teaching material for the programming seminar ["Real-Time Audio Programming In C"](https://www.ak.tu-berlin.de/menue/lehre/sommersemester_2021/real_time_audio_programmierung_in_c/) of the summer semester 2021.
 
