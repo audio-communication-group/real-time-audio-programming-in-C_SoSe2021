@@ -22,7 +22,7 @@
  *         typedef void (*bling)(void *);
  *  @endcode
  *
- *  Also implement the bling method for t_oneInt & t_twoInt which should simply \n
+ *  Also implement the bling method for t_one_int & t_twoInt which should simply \n
  *  print their member values to the command line and attach them to the \n
  *  objects. Instead of calling printf call the bling methods from inside the \n
  *  main function.
@@ -42,10 +42,10 @@
 
 
 /** @const  n-1 chars that can be used to name the object type */
-#define MAXOBJECTNAMESIZE 24
+#define MAX_OBJECT_NAME_SIZE 24
 
 /** @const Number of objects that can be created */
-#define MAXNUMBEROFOBJECTS 10
+#define MAX_NUMBER_OF_OBJECTS 10
 
 /** @typedef @c void pointer to a @c void function. */
 typedef void* (*new)(void);
@@ -63,14 +63,14 @@ typedef void (*bling)(void*);
 /** @typedef struct holding an @c bling object. */
 typedef struct _registeredIntObject
 {
-    char name[MAXOBJECTNAMESIZE];           /**< @c char array for the object name. */
+    char name[MAX_OBJECT_NAME_SIZE];           /**< @c char array for the object name. */
     new newMethod;                          /**< Pointer to the constructor method. */
     bling blingMethod;                      /**< Pointer to the later added @c bling method. */
     int argc;                               /**< Arguments count. */
 } t_registeredIntObject;
 
 /** @typedef struct holding an @c bling object. */
-t_registeredIntObject objectLookupTable[MAXNUMBEROFOBJECTS];
+t_registeredIntObject objectLookupTable[MAX_NUMBER_OF_OBJECTS];
 
 /** @var Just count the number of objects added to the lookup table later */
 int currentIndex = 0;
@@ -79,13 +79,13 @@ int currentIndex = 0;
 /** @typedef base class struct type */
 typedef struct _object
 {
-    char className[MAXOBJECTNAMESIZE];  /**< @c char array holding class name*/
+    char className[MAX_OBJECT_NAME_SIZE];  /**< @c char array holding class name*/
 } t_object;
 
 /** @typedef inherited resp. child class with one @c int element */
 typedef struct _oneInt
 {
-    char className[MAXOBJECTNAMESIZE];  /**< @c char array holding class name*/
+    char className[MAX_OBJECT_NAME_SIZE];  /**< @c char array holding class name*/
     int val1;                           /**< Class data */
 } t_oneInt;
 
@@ -120,7 +120,7 @@ void oneInt_bling(void *x)
 /** @typedef inherited resp. child class with two @c int elements */
 typedef struct _twoInt
 {
-    char className[MAXOBJECTNAMESIZE];  /**< @c char array holding class name*/
+    char className[MAX_OBJECT_NAME_SIZE];  /**< @c char array holding class name*/
     int val1;                           /**< Class data */
     int val2;                           /**< Class data */
 } t_twoInt;
@@ -178,7 +178,7 @@ void addBling(char *name, bling b)
 {
     // Get the index of the object in the lookup table
     int i = 0;
-    while(i<MAXNUMBEROFOBJECTS)
+    while(i<MAX_NUMBER_OF_OBJECTS)
     {
         if(!strcmp(name, objectLookupTable[i].name)) {
             
@@ -201,7 +201,7 @@ void object_bling(void *x)
 {
     // Get the index of the object in the lookup table
     int i = 0;
-    while(i<MAXNUMBEROFOBJECTS)
+    while(i<MAX_NUMBER_OF_OBJECTS)
     {
         if(!strcmp(((t_object *)x)->className, objectLookupTable[i].name)) {
             
@@ -219,7 +219,7 @@ void object_bling(void *x)
  *  @param argv Pointer to the arguments array (argument vector).
  *  @return x @c void pointer to the new object.
  *  @todo Error handling if function returns @c NULL \n
- *  or @code i >= MAXNUMBEROFOBJECTS. @endcode
+ *  or @code i >= MAX_NUMBER_OF_OBJECTS. @endcode
  */
 void *newObject(char *name, int *argv)
 {
@@ -228,7 +228,7 @@ void *newObject(char *name, int *argv)
     
     // Get the index of the object in the lookup table.
     int i = 0;
-    while(i<MAXNUMBEROFOBJECTS)
+    while(i<MAX_NUMBER_OF_OBJECTS)
     {
         if(!strcmp(name, objectLookupTable[i].name))
             break;
@@ -274,27 +274,27 @@ int main()
     twoElementsArray[1] = 4;
     
     // Register objects in the lookup table.
-    registerObject("oneint",                // Name of the object
+    registerObject("one_int",                // Name of the object
                    (new)oneInt_new,         // Back casted new method pointer
                    1);                      // Number of arguments resp. argc
     
-    addBling("oneint",                      // Name of the object
+    addBling("one_int",                      // Name of the object
              (bling)oneInt_bling);          // Back casted bling method pointer
     
-    registerObject("twoint",
+    registerObject("two_int",
                    (new)twoInt_new,         // Back casted new method pointer
                    2);                      // Number of arguments resp. argc
     
     // Add method pointer to the lookup table object
-    addBling("twoint",                      // Name of the object
+    addBling("two_int",                      // Name of the object
              (bling)twoInt_bling);          // Back casted bling method pointer
     
     // Initialize the new objects
-    t_oneInt *a = (t_oneInt*)newObject("oneint",    // Name of the object
+    t_oneInt *a = (t_oneInt*)newObject("one_int",    // Name of the object
                                        oneElementArray);         // Pointer to the arguments
     // list resp. argv
     
-    t_twoInt *b = (t_twoInt*)newObject("twoint",    // Name of the object
+    t_twoInt *b = (t_twoInt*)newObject("two_int",    // Name of the object
                                        twoElementsArray);        // Pointer to the arguments
     // list resp. argv
     
