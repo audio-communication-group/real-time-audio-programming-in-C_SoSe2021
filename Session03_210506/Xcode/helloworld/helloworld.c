@@ -88,7 +88,8 @@ void helloworld_setup(void) {
 
   /* attach functions to messages */
   /* here we bind the "helloworld_bang()" function to the class "helloworld_class()" -
-   * it will be called whenever a bang is received
-   */
+   * it will be called whenever a bang is received.
+   * class_addbang adds a method for a “bang”-message to the class that is defined
+   * in the first argument. The added method is defined in the second argument. */
   class_addbang(helloworld_class, helloworld_bang); 
 }

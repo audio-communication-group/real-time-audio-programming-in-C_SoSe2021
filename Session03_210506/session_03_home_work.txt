@@ -1,0 +1,5 @@
+1. Review the external code examples and read the API-Reference on https://github.com/pure-data/externals-howto
+	for further understanding of syntax and methods!
+	E.g. what does "gensym" do?
+	
+2. Extend the helloworld example with a bang output and use this in your hello_world_test.pd
