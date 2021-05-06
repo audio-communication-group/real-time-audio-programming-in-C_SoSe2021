@@ -1,6 +1,9 @@
 # System
 .DS_Store
 
+# C/PD
+.o
+
 # Office
 *.docx
 

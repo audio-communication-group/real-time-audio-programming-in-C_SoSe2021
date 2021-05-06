@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+environment/project/org.eclipse.linuxtools.cdt.autotools.core.toolChain.463568022/PATH/delimiter=;
+environment/project/org.eclipse.linuxtools.cdt.autotools.core.toolChain.463568022/PATH/operation=append
+environment/project/org.eclipse.linuxtools.cdt.autotools.core.toolChain.463568022/PATH/value=C\:/Program Files/Java/jre1.8.0_171/bin/server;C\:/Program Files/Java/jre1.8.0_171/bin;C\:/Program Files/Java/jre1.8.0_171/lib/amd64;C\:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C\:\\WINDOWS\\system32;C\:\\WINDOWS;C\:\\WINDOWS\\System32\\Wbem;C\:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C\:\\Users\\thomas.resch\\AppData\\Local\\Microsoft\\WindowsApps;;C\:\\Users\\thomas.resch\\Desktop;C\:\\Program Files (x86)\\mingw-w64\\i686-7.3.0-posix-dwarf-rt_v5-rev0;C\:\\Program Files (x86)\\mingw-w64\\i686-7.3.0-posix-dwarf-rt_v5-rev0\\mingw32\\bin
+environment/project/org.eclipse.linuxtools.cdt.autotools.core.toolChain.463568022/append=true
+environment/project/org.eclipse.linuxtools.cdt.autotools.core.toolChain.463568022/appendContributed=true

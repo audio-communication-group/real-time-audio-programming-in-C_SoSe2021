@@ -1,0 +1,20 @@
+#N canvas 837 354 673 508 12;
+#X obj 267 176 osc~ 440;
+#X obj 398 219 *~ 0.5;
+#X obj 360 92 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 322 364 dac~;
+#X msg 113 91 makeuplevel \$1;
+#X floatatom 137 26 5 0 0 0 - - -;
+#X floatatom 65 159 5 0 0 0 - - -;
+#X msg 69 215 clippinglevel \$1;
+#X obj 263 266 rtap_limiter~;
+#X connect 0 0 1 0;
+#X connect 1 0 8 0;
+#X connect 2 0 1 1;
+#X connect 4 0 8 0;
+#X connect 5 0 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 3 0;
+#X connect 8 0 3 1;

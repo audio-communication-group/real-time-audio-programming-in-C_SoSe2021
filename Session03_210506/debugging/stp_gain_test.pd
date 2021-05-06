@@ -1,0 +1,16 @@
+#N canvas 1030 166 450 300 10;
+#X obj 49 156 stp_gain~;
+#X obj 50 52 osc~ 880;
+#X obj 40 242 dac~;
+#X obj 160 44 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 2100 1;
+#X obj 156 66 / 127;
+#X msg 155 117 gain \$1;
+#X floatatom 157 93 5 0 0 0 - - -;
+#X connect 0 0 2 0;
+#X connect 0 0 2 1;
+#X connect 1 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 5 0 0 0;
+#X connect 6 0 5 0;
