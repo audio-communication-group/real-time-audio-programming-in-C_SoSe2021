@@ -1,5 +1,7 @@
-1. Review the external code examples and read the API-Reference on https://github.com/pure-data/externals-howto
-	for further understanding of syntax and methods!
-	E.g. what does "gensym" do?
+1. 	Theory: Review the external code examples and read the API-Reference on https://github.com/pure-data/externals-howto
+	for further understanding of syntax and methods of a PD external!
+	E.g. what does "gensym" do? What does "CLASS_DEFAULT" mean? 
+	In this way, clear all other unknown expressions in the code examples!
 	
-2. Extend the helloworld example with a bang output and use this in your hello_world_test.pd
+2. 	Praxis: Extend the helloworld example with a bang output and use it in your hello_world_test.pd. 
+	Read "Structure of inputs and outputs" in the API reference!
