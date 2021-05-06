@@ -60,18 +60,17 @@ bool is_empty() {
 
 //insert link at the first location
 void insert_node(p_node_t new_node) {
-    // You code this:
-    
     // Check if there is a list
     if (is_empty()) {
- 
+        g_p_head = new_node;
+        g_p_head->next = g_p_head;
         
     } else {
         //point it to old first node
-        
+        new_node->next = g_p_head;
         
         //point first to new first node
-        
+        g_p_head = new_node;
     }
 }
 
