@@ -57,10 +57,10 @@
 
 
 /** @const Number + 1 chars that can be used to name the object type */
-#define MAXOBJECTNAMESIZE 24
+#define MAX_OBJECT_NAME_SIZE 24
 
 /** @const Number of objects that can be created */
-#define MAXNUMBEROFOBJECTS 10
+#define MAX_NUMBER_OF_OBJECTS 10
 
 
 /** @typedef @c void pointer to a @c void function. */
@@ -75,9 +75,9 @@ typedef void* (*methodIntInt)(int, int);
 /** @typedef struct holding an @c int object. */
 typedef struct _registeredIntObject
 {
-    char name[MAXOBJECTNAMESIZE];   /**< @c char array for the object name. */
-    new newMethod;                  /**< Object Constructor */
-    int argc;                       /**< Arguments count */
+    char name[MAX_OBJECT_NAME_SIZE];	/**< @c char array for the object name. */
+    new newMethod;                  	/**< Object Constructor */
+    int argc;                       	/**< Arguments count */
 } t_registeredIntObject;
 
 /** @typedef struct with one @c int element only. */
@@ -122,7 +122,7 @@ void *twoInt_new(int v1, int v2) {
 }
 
 /** @brief Lookup table for your objects. */
-t_registeredIntObject objectLookupTable[MAXNUMBEROFOBJECTS];
+t_registeredIntObject objectLookupTable[MAX_NUMBER_OF_OBJECTS];
 
 /** @var Just count the number of objects added to the lookup table later */
 int currentIndex = 0;
@@ -152,7 +152,7 @@ void registerObject(char *name, new m, int argc)
  *  @param argv Pointer to the @c int arguments array (argument vector).
  *  @return @c void pointer to the new object.
  *  @todo Error handling if function returns @c NULL \n
- *  or @c i >= MAXNUMBEROFOBJECTS.
+ *  or @c i >= MAX_NUMBER_OF_OBJECTS.
  */
 
 void *newObject(char *name, int *argv)
@@ -160,7 +160,7 @@ void *newObject(char *name, int *argv)
     // Index of object count
     int i = 0;
     // Finding object index in lookup table
-    while(i<MAXNUMBEROFOBJECTS)
+    while(i<MAX_NUMBER_OF_OBJECTS)
     {   /** @brief Find index of the object in the lookup table */
         if(!strcmp(name, objectLookupTable[i].name))
             break;

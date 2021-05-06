@@ -18,7 +18,7 @@
  *         typedef void (*bling)(void *);
  *  @endcode
  *
- *  Also implement the bling method for @c t_oneInt & @c t_twoInt which should \n
+ *  Also implement the bling method for @c t_one_int & @c t_two_int which should \n
  *  simply print their member values to the command line and attach them to \n
  *  the objects. Instead of calling @c printf call the bling methods from \n
  *  inside the main function.
@@ -74,52 +74,52 @@ int currentIndex = 0;
 
 
 /** @typedef struct with one @c int element only. */
-typedef struct _oneInt
+typedef struct _one_int
 {
-    int val1;                   /**< Struct @c t_oneInt variable. */
-} t_oneInt;
+    int val1;                   /**< Struct @c t_one_int variable. */
+} t_one_int;
 
 
 /**
  *  @brief Constructor function that takes a @c int value and returns a pointer\n
- *  to a new @c t_oneInt struct.
+ *  to a new @c t_one_int struct.
  *  @param v1 @c int value of the new struct element.
- *  @return x @c void pointer to the new @c t_oneInt object.
+ *  @return x @c void pointer to the new @c t_one_int object.
  */
-void *oneInt_new(int v1)
+void *one_int_new(int v1)
 {   /**< Allocate memory for object @c x */
-    t_oneInt *x = (t_oneInt *)malloc(sizeof(t_oneInt));
+    t_one_int *x = (t_one_int *)malloc(sizeof(t_one_int));
     x->val1 = v1;                       /**< Set value */
     
     return (void *)x;                   /**< Cast @c x to @c void pointer */
 }
 
 /**
- *  @brief Method to print the data of a @c t_oneInt object.
- *  @param x @c void pointer to an @c t_oneInt object.
+ *  @brief Method to print the data of a @c t_one_int object.
+ *  @param x @c void pointer to an @c t_one_int object.
  */
-void oneInt_bling(void *x)
+void one_int_bling(void *x)
 {
-    printf("%d\n", ((t_oneInt *)x)->val1);
+    printf("%d\n", ((t_one_int *)x)->val1);
 }
 
 /** @typedef struct with two @c int elements. */
-typedef struct _twoInt
+typedef struct _two_int
 {
-    int val1;                       /**< Struct @c t_twoInt variable. */
-    int val2;                       /**< Struct @c t_twoInt variable. */
-} t_twoInt;
+    int val1;                       /**< Struct @c t_two_int variable. */
+    int val2;                       /**< Struct @c t_two_int variable. */
+} t_two_int;
 
 /**
- *  @brief Constructor function for a @c t_twoInt object, that takes two @c int\n
- *  values and returns a pointer to a new @c t_oneInt struct object.
+ *  @brief Constructor function for a @c t_two_int object, that takes two @c int\n
+ *  values and returns a pointer to a new @c t_one_int struct object.
  *  @param v1 @c int value of the new struct element.
  *  @param v2 @c int value of the new struct element.
- *  @return x @c void pointer to the new @c t_oneInt object.
+ *  @return x @c void pointer to the new @c t_one_int object.
  */
-void *twoInt_new(int v1, int v2)
+void *two_int_new(int v1, int v2)
 {   /**< Allocate memory for object @c x */
-    t_twoInt *x = (t_twoInt *)malloc(sizeof(t_twoInt));
+    t_two_int *x = (t_two_int *)malloc(sizeof(t_two_int));
     
     x->val1 = v1;           /**< Set value */
     x->val2 = v2;           /**< Set value */
@@ -128,12 +128,12 @@ void *twoInt_new(int v1, int v2)
 }
 
 /**
- *  @brief Method to print the data of a @c t_twoInt object.
- *  @param x @c void pointer to an @c t_twoInt object.
+ *  @brief Method to print the data of a @c t_two_int object.
+ *  @param x @c void pointer to an @c t_two_int object.
  */
-void twoInt_bling(void *x)
+void two_int_bling(void *x)
 {
-    printf("%d, %d\n", ((t_twoInt *)x)->val1, ((t_twoInt *)x)->val2);
+    printf("%d, %d\n", ((t_two_int *)x)->val1, ((t_two_int *)x)->val2);
 }
 
 /**
@@ -255,22 +255,22 @@ int main()
     twoElementsArray[1] = 4;
     
     // Register object in the lookup table.
-    registerObject("oneint",            // Name of the object
-                   (new)oneInt_new,     // Back casted new method pointer
+    registerObject("one_int",            // Name of the object
+                   (new)one_int_new,     // Back casted new method pointer
                    1);                  // Number of arguments resp. argc
     
     // Cast back and add the method pointer to the lookup table object
-    addBling("oneint",                  // Name of the object
-             (bling)oneInt_bling);      // Back casted bling method pointer
+    addBling("one_int",                  // Name of the object
+             (bling)one_int_bling);      // Back casted bling method pointer
     
     // Register object in the lookup table.
-    registerObject("twoint",            // Name of the object
-                   (new)twoInt_new,     // Back casted new method pointer
+    registerObject("two_int",            // Name of the object
+                   (new)two_int_new,     // Back casted new method pointer
                    2);                  // Number of arguments resp. argc
     
     // Add method pointer to the lookup table object
-    addBling("twoint",                  // Name of the object
-             (bling)twoInt_bling);      // Back casted bling method pointer
+    addBling("two_int",                  // Name of the object
+             (bling)two_int_bling);      // Back casted bling method pointer
     
     
     
@@ -278,15 +278,15 @@ int main()
     // ============================
     
     // Initialize the new objects and cast back the pointer
-    t_oneInt *a = (t_oneInt*)newObject("oneint",            // Name of the object
+    t_one_int *a = (t_one_int*)newObject("one_int",            // Name of the object
                                        oneElementArray);    // Pointer to the arguments list resp. argv
     
-    t_twoInt *b = (t_twoInt*)newObject("twoint",            // Name of the object
+    t_two_int *b = (t_two_int*)newObject("two_int",            // Name of the object
                                        twoElementsArray);   // Pointer to the arguments list resp. argv
     
     // Call the bling method to print the objects data to console.
-    object_bling("oneint", a);
-    object_bling("twoint", b);
+    object_bling("one_int", a);
+    object_bling("two_int", b);
     
     return 0;
 }

@@ -70,12 +70,14 @@ myClass *myClass_new()
  */
 void myClass_free(myClass *x)
 {
-
+	free(x);
 }
 
 void myClass_print(myClass *x)
 {
-
+	printf("%d\n", x->type);
+	printf("%f\n", x->floatVal);
+	printf("%i\n", x->intVal);
 }
 
 
@@ -84,7 +86,7 @@ int main() {
     myClass *classInstance = myClass_new();
     
     // Use the object
-    printf("%d\n", classInstance->type);
+	myClass_print(classInstance);
     
     // Free the object
     myClass_free(classInstance);
