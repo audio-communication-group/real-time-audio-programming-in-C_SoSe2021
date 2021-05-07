@@ -1,4 +1,4 @@
-# Attention: Due to the failure of the TU-IT, the zoom link will be published on ISIS. Until then, happy coding! 
+# Attention: Due to the failure of the TU-IT, the zoom link is published on the ISIS platform. 
 
 
 
