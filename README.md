@@ -1,5 +1,6 @@
-# -![#f03c15] Attention: Due to the failure of the TU-IT, the zoom link is published on the ISIS platform. `#f03c15`
-
+```diff
+# -![#f03c15] Attention: Due to the failure of the TU-IT, the zoom link is published on the ISIS platform.
+```
 
 
 # Real-Time Audio Programming In C
