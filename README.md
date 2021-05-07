@@ -1,5 +1,5 @@
 ```diff
-- Attention: Due to the failure of the TU-IT, the zoom link is published on the ISIS platform.
+- Attention: Due to the failure of the TU-IT, the zoom link for the online seminar is published on the ISIS platform.
 ```
 
 
