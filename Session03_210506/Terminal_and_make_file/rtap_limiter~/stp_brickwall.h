@@ -15,6 +15,10 @@
 #ifndef stp_brickwall_h
 #define stp_brickwall_h
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -115,5 +119,9 @@ void stp_brickwall_clip(stp_brickwall *x, STP_INPUTVECTOR *in, STP_OUTPUTVECTOR 
  */
 
 void stp_brickwall_perform(stp_brickwall *x, STP_INPUTVECTOR *in, STP_OUTPUTVECTOR *out, int vectorSize);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* stp_brickwall_h */
