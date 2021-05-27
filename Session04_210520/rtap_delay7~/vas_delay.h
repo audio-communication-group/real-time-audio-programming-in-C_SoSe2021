@@ -32,6 +32,8 @@ typedef struct vas_tapout
     float gain;
     float pan;
 } vas_tapout;
+
+vas_tapout *vas_tapout_new();
     
 /**
  * @struct vas_delay
@@ -53,7 +55,8 @@ typedef struct vas_delay
     int writeIndex;
     float *writePointerL;    /**< Circular pointer to delay buffer */
     float *writePointerR;    /**< Circular pointer to delay buffer */
-    vas_tapout tap[MAXNUMBEROFTAPS];
+    
+    vas_tapout *tap;
 } vas_delay;
 
 /**

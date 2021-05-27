@@ -40,6 +40,7 @@ NewProjectAudioProcessorEditor::NewProjectAudioProcessorEditor (NewProjectAudioP
     
     makeup.addListener(this);  // define the instance that implements the listener function
     clipping.addListener (this);   
+    
 }
 
 /* 
