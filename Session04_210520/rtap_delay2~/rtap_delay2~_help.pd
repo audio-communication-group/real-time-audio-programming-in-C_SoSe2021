@@ -1,0 +1,26 @@
+#N canvas 628 195 904 655 12;
+#X obj 206 493 dac~;
+#X obj 103 265 readsf~;
+#X msg 147 170 1;
+#X obj 97 43 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 147 70 t b b;
+#X msg 100 115 open cicerospeech.wav;
+#X msg 181 170 0;
+#X obj 280 363 rtap_delay2~;
+#X floatatom 319 291 5 0 0 0 - - -;
+#X floatatom 378 291 5 0 0 0 - - -;
+#X connect 1 0 0 0;
+#X connect 1 0 7 0;
+#X connect 1 0 0 1;
+#X connect 1 1 3 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 4 1 5 0;
+#X connect 5 0 1 0;
+#X connect 6 0 1 0;
+#X connect 7 0 0 0;
+#X connect 7 1 0 1;
+#X connect 8 0 7 1;
+#X connect 9 0 7 2;
