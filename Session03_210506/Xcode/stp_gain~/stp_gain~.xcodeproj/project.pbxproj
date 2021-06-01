@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		841712CC2091E46A00B02D54 /* stp_gain_pd.c in Sources */ = {isa = PBXBuildFile; fileRef = 841712CB2091E46A00B02D54 /* stp_gain_pd.c */; };
+		841712CC2091E46A00B02D54 /* stp_gain~.c in Sources */ = {isa = PBXBuildFile; fileRef = 841712CB2091E46A00B02D54 /* stp_gain~.c */; };
 		844237661FB4A69E005ACA50 /* m_pd.h in Headers */ = {isa = PBXBuildFile; fileRef = 844237651FB4A69D005ACA50 /* m_pd.h */; };
 		84AEDB7920C2A91900256DE2 /* stp_gain.c in Sources */ = {isa = PBXBuildFile; fileRef = 84AEDB7720C2A91900256DE2 /* stp_gain.c */; };
 		84AEDB7A20C2A91900256DE2 /* stp_gain.h in Headers */ = {isa = PBXBuildFile; fileRef = 84AEDB7820C2A91900256DE2 /* stp_gain.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		841712CB2091E46A00B02D54 /* stp_gain_pd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stp_gain_pd.c; sourceTree = "<group>"; };
+		841712CB2091E46A00B02D54 /* stp_gain~.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "stp_gain~.c"; sourceTree = "<group>"; };
 		844237651FB4A69D005ACA50 /* m_pd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = m_pd.h; sourceTree = "<group>"; };
 		84AEDB7720C2A91900256DE2 /* stp_gain.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = stp_gain.c; sourceTree = "<group>"; };
 		84AEDB7820C2A91900256DE2 /* stp_gain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stp_gain.h; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 				84AEDB7B20C2ADC100256DE2 /* stp_defines.h */,
 				84AEDB7820C2A91900256DE2 /* stp_gain.h */,
 				84AEDB7720C2A91900256DE2 /* stp_gain.c */,
-				841712CB2091E46A00B02D54 /* stp_gain_pd.c */,
+				841712CB2091E46A00B02D54 /* stp_gain~.c */,
 				844237651FB4A69D005ACA50 /* m_pd.h */,
 				FA2927ED1A899B4C005A2BA9 /* Products */,
 				844237731FB4A6E1005ACA50 /* Frameworks */,
@@ -131,7 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84AEDB7920C2A91900256DE2 /* stp_gain.c in Sources */,
-				841712CC2091E46A00B02D54 /* stp_gain_pd.c in Sources */,
+				841712CC2091E46A00B02D54 /* stp_gain~.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
