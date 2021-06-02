@@ -42,7 +42,7 @@
       allowLocationSimulation = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
-         FilePath = "/Applications/Pd-0.49-1.app/Contents/Resources/bin/pd">
+         FilePath = "/Applications/Pd-0.50-2.app/Contents/Resources/bin/pd">
       </PathRunnable>
       <MacroExpansion>
          <BuildableReference
@@ -55,7 +55,7 @@
       </MacroExpansion>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "-open /Users/mr.markuese/Desktop/stp_gain_test.pd"
+            argument = "-open /Users/mrmarkuese/Documents/TUB/Lehre/SoSe_2021/real-time-audio-programming-in-C_SoSe2021/Session04_210520/rtap_delay5~/rtap_delay5~_help.pd"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

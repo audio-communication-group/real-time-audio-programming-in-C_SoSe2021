@@ -333,6 +333,16 @@ or with showing branches and merges in ASCII.
 `$ git log --pretty=format:"%h - %an, %ar : %s"  --graph`
 
 
+### Overwrite master with contents of feature branch (feature > master)
+`$ git checkout feature    	# source name`
+
+`$ git merge -s ours master  	# target name`
+
+`$ git checkout master       	# target name`
+
+`$ git merge feature      	# source name`
+
+
 
 ### Filter in time
 `$ git log --since=1.weeks`
