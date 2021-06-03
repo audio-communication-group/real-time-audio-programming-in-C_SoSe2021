@@ -95,11 +95,9 @@ void rtap_osc2_tilde_free(rtap_osc2_tilde *x)
 
 void rtap_getArray(rtap_osc2_tilde *x, t_symbol *arrayname, t_word **array, int *length)
 {
-    t_garray *a;
-
     if (!(a = (t_garray *)pd_findbyclass(arrayname, garray_class)))
     {
-        if (*arrayname->s_name) pd_error(x, "vas_binaural~: %s: no such array",
+        if (*arrayname->s_name) pd_error(x, "vas_osc~: %s: no such array",
             arrayname->s_name);
         *array = 0;
     }

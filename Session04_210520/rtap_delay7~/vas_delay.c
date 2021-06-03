@@ -1,6 +1,6 @@
 #include "vas_delay.h"
 
-vas_delay *vas_delay_new(int bufferSize, int numberOfTaps)
+vas_delay *vas_delay_new(int bufferSize)
 {
     vas_delay *x = (vas_delay *)malloc(sizeof(vas_delay));
     x->bufferSize = bufferSize;
@@ -10,12 +10,12 @@ vas_delay *vas_delay_new(int bufferSize, int numberOfTaps)
     x->writePointerR = x->bufferR;
     x->writeIndex = 0;
     
-    x->tap = malloc(sizeof(vas_tapout) * numberOfTaps);
-    for(int i = 0; i<numberOfTaps;i++)
-        
+    for(int i = 0; i<MAXNUMBEROFTAPS;i++)
     {
-        x->tap[i].gain = 0;
-
+        x->tap[i].readPointer = x->bufferL;
+        x->tap[i].readIndex = -1;
+        x->tap[i].gain = 1.0;
+        x->tap[i].pan = 0.5;
     }
     
     return x;

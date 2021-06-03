@@ -20,10 +20,10 @@ rtap_limiter~.class.sources += stp_brickwall.c
 datafiles =
 
 # include Makefile.pdlibbuilder from submodule directory 'pd-lib-builder'
-PDLIBBUILDER_DIR=pd-lib-builder/
+PDLIBBUILDER_DIR = pd-lib-builder/
 
 CC += $(INCLUDES)
-# CC +=  -mavx -DVAS_USE_AVX
+#CC +=  -DMAX_NUMBER_OF_HARMONICS 50
 
 include $(PDLIBBUILDER_DIR)/Makefile.pdlibbuilder
 
