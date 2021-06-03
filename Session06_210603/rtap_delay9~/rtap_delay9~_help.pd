@@ -1,5 +1,5 @@
 #N canvas 628 195 904 655 12;
-#X obj 305 587 dac~;
+#X obj 199 618 dac~;
 #X obj 69 249 readsf~;
 #X msg 96 153 1;
 #X obj 42 36 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -12,11 +12,11 @@
 #X msg 447 161 rand_tap 1;
 #X msg 544 157 rand_tap \$1;
 #X obj 544 109 hradio 15 1 0 10 empty empty empty 0 -8 0 10 -4034 -1
--1 0;
+-1 1;
 #X floatatom 544 129 5 0 0 0 - - -;
 #X floatatom 546 269 5 0 0 0 - - -;
 #X obj 549 219 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -159808
--1 -1 3600 0;
+-1 -1 5400 0;
 #X obj 546 242 int;
 #X msg 549 503 rand_tap \$1;
 #X obj 300 269 readsf~;

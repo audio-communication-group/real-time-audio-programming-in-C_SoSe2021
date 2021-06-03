@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		841712CC2091E46A00B02D54 /* rtap_fftin.c in Sources */ = {isa = PBXBuildFile; fileRef = 841712CB2091E46A00B02D54 /* rtap_fftin.c */; };
+		841712CC2091E46A00B02D54 /* rtap_fftin~.c in Sources */ = {isa = PBXBuildFile; fileRef = 841712CB2091E46A00B02D54 /* rtap_fftin~.c */; };
 		E46AFD0C249212A700EEDF61 /* vas_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = E46AFD0B249212A700EEDF61 /* vas_mem.c */; };
 		E4F5403D24B61B96009FE98A /* vas_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = E46AFD0B249212A700EEDF61 /* vas_mem.c */; };
-		E4F5404824B61BE4009FE98A /* rtap_fftout.c in Sources */ = {isa = PBXBuildFile; fileRef = E4F5404724B61BE4009FE98A /* rtap_fftout.c */; };
+		E4F5404824B61BE4009FE98A /* rtap_fftout~.c in Sources */ = {isa = PBXBuildFile; fileRef = E4F5404724B61BE4009FE98A /* rtap_fftout~.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		841712CB2091E46A00B02D54 /* rtap_fftin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rtap_fftin.c; sourceTree = "<group>"; };
+		841712CB2091E46A00B02D54 /* rtap_fftin~.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "rtap_fftin~.c"; sourceTree = "<group>"; };
 		844237651FB4A69D005ACA50 /* m_pd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = m_pd.h; sourceTree = "<group>"; };
 		E46AFD0B249212A700EEDF61 /* vas_mem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vas_mem.c; sourceTree = "<group>"; };
 		E46AFD0E249212AD00EEDF61 /* vas_mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vas_mem.h; sourceTree = "<group>"; };
 		E46AFD0F249212AD00EEDF61 /* vas_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vas_util.h; sourceTree = "<group>"; };
 		E4F5404624B61B96009FE98A /* rtap_fftout~.pd_darwin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "rtap_fftout~.pd_darwin"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4F5404724B61BE4009FE98A /* rtap_fftout.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rtap_fftout.c; sourceTree = "<group>"; };
+		E4F5404724B61BE4009FE98A /* rtap_fftout~.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "rtap_fftout~.c"; sourceTree = "<group>"; };
 		FA2927EC1A899B4C005A2BA9 /* rtap_fftin~.pd_darwin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "rtap_fftin~.pd_darwin"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -52,8 +52,8 @@
 		FA2927E31A899B4C005A2BA9 = {
 			isa = PBXGroup;
 			children = (
-				841712CB2091E46A00B02D54 /* rtap_fftin.c */,
-				E4F5404724B61BE4009FE98A /* rtap_fftout.c */,
+				841712CB2091E46A00B02D54 /* rtap_fftin~.c */,
+				E4F5404724B61BE4009FE98A /* rtap_fftout~.c */,
 				E46AFD0B249212A700EEDF61 /* vas_mem.c */,
 				E46AFD0E249212AD00EEDF61 /* vas_mem.h */,
 				E46AFD0F249212AD00EEDF61 /* vas_util.h */,
@@ -164,7 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4F5404824B61BE4009FE98A /* rtap_fftout.c in Sources */,
+				E4F5404824B61BE4009FE98A /* rtap_fftout~.c in Sources */,
 				E4F5403D24B61B96009FE98A /* vas_mem.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,7 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841712CC2091E46A00B02D54 /* rtap_fftin.c in Sources */,
+				841712CC2091E46A00B02D54 /* rtap_fftin~.c in Sources */,
 				E46AFD0C249212A700EEDF61 /* vas_mem.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

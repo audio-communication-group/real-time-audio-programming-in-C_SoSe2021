@@ -69,7 +69,7 @@
       </MacroExpansion>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "-open /Users/mrmarkuese/Documents/TUB/Lehre/SoSe_2021/real-time-audio-programming-in-C_SoSe2021/Session06_210603/rtap_fftin~/rtap_fftin-help.pd"
+            argument = "-open /Users/mrmarkuese/Documents/TUB/Lehre/SoSe_2021/real-time-audio-programming-in-C_SoSe2021/Session06_210603/rtap_fftin~/rtap_fftin~_help.pd"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
