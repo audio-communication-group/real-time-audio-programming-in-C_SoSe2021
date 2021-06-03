@@ -129,7 +129,7 @@ void rtap_lowpass_tilde_setup(void)
         sizeof(rtap_lowpass_tilde),
             CLASS_DEFAULT,
             A_DEFFLOAT, 0);
-
+    
       class_addmethod(rtap_lowpass_tilde_class, (t_method)rtap_lowpass_tilde_dsp, gensym("dsp"), 0);
 
       // this adds the gain message to our object

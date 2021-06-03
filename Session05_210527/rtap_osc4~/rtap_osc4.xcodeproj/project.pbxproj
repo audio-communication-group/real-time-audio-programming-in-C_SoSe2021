@@ -233,7 +233,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_OPTIMIZATION_PROFILE_FILE = "";
-				DSTROOT = /;
+				DSTROOT = "/Applications/Pd-0.50-2.app/Contents/Resources/extra/";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_EXTENSION = pd_darwin;
@@ -244,7 +244,7 @@
 					VAS_OUTPUTVECTOR_USE_FLOAT,
 					VAS_INPUTVECTOR_USE_FLOAT,
 				);
-				INSTALL_PATH = /Users/harveykeitel/Documents/Pd/externals;
+				INSTALL_PATH = /;
 				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
@@ -263,7 +263,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_OPTIMIZATION_PROFILE_FILE = "";
-				DSTROOT = /;
+				DSTROOT = "/Applications/Pd-0.50-2.app/Contents/Resources/extra/";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_EXTENSION = pd_darwin;
@@ -274,7 +274,7 @@
 					VAS_OUTPUTVECTOR_USE_FLOAT,
 					VAS_INPUTVECTOR_USE_FLOAT,
 				);
-				INSTALL_PATH = /Users/harveykeitel/Documents/Pd/externals;
+				INSTALL_PATH = /;
 				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
