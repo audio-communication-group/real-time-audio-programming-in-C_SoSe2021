@@ -1,7 +1,7 @@
 /**
  * @file vas_delay.h
- * @author Thomas Resch<br>
-   <br>
+ * @author C.Jaedicke, A.Monciero, P.Schuhladen, F.Müller <br>
+ * An interpolated delay <br>
  * <br>
  * @brief Audio Object for adding delay to the input<br>
  * <br>
@@ -32,8 +32,6 @@ typedef struct vas_tapout
     float gain;
     float pan;
 } vas_tapout;
-
-vas_tapout *vas_tapout_new();
     
 /**
  * @struct vas_delay
@@ -55,8 +53,7 @@ typedef struct vas_delay
     int writeIndex;
     float *writePointerL;    /**< Circular pointer to delay buffer */
     float *writePointerR;    /**< Circular pointer to delay buffer */
-    
-    vas_tapout *tap;
+    vas_tapout tap[MAXNUMBEROFTAPS];
 } vas_delay;
 
 /**
