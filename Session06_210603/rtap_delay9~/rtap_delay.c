@@ -36,7 +36,7 @@ typedef struct rtap_delay9_tilde
     t_sample f;
     vas_delay *delay;
     
-    void *inR;
+    void *inR; // not used now
     t_outlet *outL;
     t_outlet *outR;
 } rtap_delay9_tilde;
