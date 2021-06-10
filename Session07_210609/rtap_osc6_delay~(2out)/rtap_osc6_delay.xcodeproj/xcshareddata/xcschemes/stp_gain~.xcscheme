@@ -17,7 +17,7 @@
                BlueprintIdentifier = "FA2927EB1A899B4C005A2BA9"
                BuildableName = "rtap_osc6_delay~.pd_darwin"
                BlueprintName = "rtap_osc6_delay"
-               ReferencedContainer = "container:rtap_osc6delay.xcodeproj">
+               ReferencedContainer = "container:rtap_osc6_delay.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -50,12 +50,12 @@
             BlueprintIdentifier = "FA2927EB1A899B4C005A2BA9"
             BuildableName = "rtap_osc6_delay~.pd_darwin"
             BlueprintName = "rtap_osc6_delay"
-            ReferencedContainer = "container:rtap_osc6delay.xcodeproj">
+            ReferencedContainer = "container:rtap_osc6_delay.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "-open /Users/mrmarkuese/Documents/TUB/Lehre/SoSe_2021/real-time-audio-programming-in-C_SoSe2021/Session07_210609/rtap_osc6_delay~(2out)/rtap_osc6_delay~_help.pd"
+            argument = "-open /Users/mrmarkuese/Documents/TUB/Lehre/SoSe_2021/real-time-audio-programming-in-C_SoSe2021/Session07_210609/rtap_osc6_delay~(2out)/rtap_osc6_delay~_test.pd"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
@@ -72,7 +72,7 @@
             BlueprintIdentifier = "FA2927EB1A899B4C005A2BA9"
             BuildableName = "rtap_osc6_delay~.pd_darwin"
             BlueprintName = "rtap_osc6_delay"
-            ReferencedContainer = "container:rtap_osc6delay.xcodeproj">
+            ReferencedContainer = "container:rtap_osc6_delay.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

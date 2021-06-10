@@ -17,7 +17,7 @@
 #include "vas_delay.h"
 
 float MAX_DELAY_TIME_SEC = 10.0;
-static t_class *rtap_osc6_tilde_class;
+static t_class *rtap_osc6_delay_tilde_class;
 
 /**
  * @struct rtap_osc6_tilde
@@ -50,7 +50,7 @@ typedef struct rtap_osc6_delay_tilde
  * @return A pointer to the signal chain right behind the rtap_osc6_tilde object. <br>
  */
 
-t_int *rtap_osc6_tilde_perform(t_int *w)
+t_int *rtap_osc6_delay_tilde_perform(t_int *w)
 {
     rtap_osc6_tilde *x = (rtap_osc6_tilde *)(w[1]);
     t_sample  *in = (t_sample *)(w[2]);
@@ -74,7 +74,7 @@ t_int *rtap_osc6_tilde_perform(t_int *w)
 
 void rtap_osc6_delay_tilde_dsp(rtap_osc6_tilde *x, t_signal **sp)
 {
-    dsp_add(rtap_osc6_tilde_perform, 4, x, sp[0]->s_vec, sp[1]->s_vec, sp[0]->s_n);
+    dsp_add(rtap_osc6_delay_tilde_perform, 4, x, sp[0]->s_vec, sp[1]->s_vec, sp[0]->s_n);
 } //new
 
 /**
@@ -98,7 +98,7 @@ void rtap_osc6_delay_tilde_free(rtap_osc6_tilde *x)
  * For more information please refer to the <a href = "https://github.com/pure-data/externals-howto" > Pure Data Docs </a> <br>
  */
 
-void rtap_getArray(rtap_osc6_tilde *x, t_symbol *arrayname, t_word **array, int *length)
+void rtap_getArray(struct rtap_osc6_delay_tilde *x, t_symbol *arrayname, t_word **array, int *length)
 {
     t_garray *a;
 
@@ -137,7 +137,7 @@ void rtap_osc6_delay_tilde_setEnvelopeTable(rtap_osc6_tilde *x, t_symbol *name)
 
 void *rtap_osc6_delay_tilde_new(t_floatarg f, t_floatarg d)
 {
-    rtap_osc6_tilde *x = (rtap_osc6_tilde *)pd_new(rtap_osc6_tilde_class);
+    rtap_osc6_tilde *x = (rtap_osc6_tilde *)pd_new(rtap_osc6_delay_tilde_class);
     
     //The main inlet is created automatically
     x->out = outlet_new(&x->x_obj, &s_signal);
@@ -182,23 +182,23 @@ void rtap_osc6_delay_tilde_noteOn(rtap_osc6_tilde *x, float frequency, float vel
 
 void rtap_osc6_delay_tilde_setup(void)
 {
-      rtap_osc6_tilde_class = class_new(gensym("rtap_osc6_delay~"),
+    rtap_osc6_delay_tilde_class = class_new(gensym("rtap_osc6_delay~"),
             (t_newmethod)rtap_osc6_delay_tilde_new,
             (t_method)rtap_osc6_delay_tilde_free,
         sizeof(rtap_osc6_tilde),
             CLASS_DEFAULT,
             A_DEFFLOAT, 0);
 
-      class_addmethod(rtap_osc6_tilde_class, (t_method)rtap_osc6_delay_tilde_dsp, gensym("dsp"), 0);
+      class_addmethod(rtap_osc6_delay_tilde_class, (t_method)rtap_osc6_delay_tilde_dsp, gensym("dsp"), 0);
 
       // this adds the gain message to our object
-      class_addmethod(rtap_osc6_tilde_class, (t_method)rtap_osc6_delay_tilde_noteOn, gensym("noteon"), A_DEFFLOAT, A_DEFFLOAT, 0);
-      class_addmethod(rtap_osc6_tilde_class, (t_method)rtap_osc6_delay_tilde_setExternTable, gensym("setwaveform"), A_SYMBOL, 0);
-      class_addmethod(rtap_osc6_tilde_class, (t_method)rtap_osc6_delay_tilde_setEnvelopeTable, gensym("setenvelope"), A_SYMBOL, 0);
+      class_addmethod(rtap_osc6_delay_tilde_class, (t_method)rtap_osc6_delay_tilde_noteOn, gensym("noteon"), A_DEFFLOAT, A_DEFFLOAT, 0);
+      class_addmethod(rtap_osc6_delay_tilde_class, (t_method)rtap_osc6_delay_tilde_setExternTable, gensym("setwaveform"), A_SYMBOL, 0);
+      class_addmethod(rtap_osc6_delay_tilde_class, (t_method)rtap_osc6_delay_tilde_setEnvelopeTable, gensym("setenvelope"), A_SYMBOL, 0);
     
       // this adds the gain message to our object
-      class_addmethod(rtap_osc6_tilde_class, (t_method)rtap_delay_tilde_setDelayTime, gensym("delaytime"), A_DEFFLOAT,0); //new
+      class_addmethod(rtap_osc6_delay_tilde_class, (t_method)rtap_delay_tilde_setDelayTime, gensym("delaytime"), A_DEFFLOAT,0); //new
       
 
-      CLASS_MAINSIGNALIN(rtap_osc6_tilde_class, rtap_osc6_tilde, f);
+      CLASS_MAINSIGNALIN(rtap_osc6_delay_tilde_class, rtap_osc6_tilde, f);
 }

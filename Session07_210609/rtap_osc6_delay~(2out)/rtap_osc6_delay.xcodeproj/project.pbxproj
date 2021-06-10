@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		841712CC2091E46A00B02D54 /* rtap_osc6delay.c in Sources */ = {isa = PBXBuildFile; fileRef = 841712CB2091E46A00B02D54 /* rtap_osc6delay.c */; };
+		841712CC2091E46A00B02D54 /* rtap_osc6_delay.c in Sources */ = {isa = PBXBuildFile; fileRef = 841712CB2091E46A00B02D54 /* rtap_osc6_delay.c */; };
 		844237661FB4A69E005ACA50 /* m_pd.h in Headers */ = {isa = PBXBuildFile; fileRef = 844237651FB4A69D005ACA50 /* m_pd.h */; };
 		AC7AD61D2668F83D00500922 /* vas_delay.c in Sources */ = {isa = PBXBuildFile; fileRef = AC7AD61B2668F83D00500922 /* vas_delay.c */; };
 		AC7AD61E2668F83D00500922 /* vas_delay.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7AD61C2668F83D00500922 /* vas_delay.h */; };
@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		841712CB2091E46A00B02D54 /* rtap_osc6delay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rtap_osc6delay.c; sourceTree = "<group>"; };
+		841712CB2091E46A00B02D54 /* rtap_osc6_delay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rtap_osc6_delay.c; sourceTree = "<group>"; };
 		844237651FB4A69D005ACA50 /* m_pd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = m_pd.h; sourceTree = "<group>"; };
 		AC7AD61B2668F83D00500922 /* vas_delay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vas_delay.c; sourceTree = "<group>"; };
 		AC7AD61C2668F83D00500922 /* vas_delay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vas_delay.h; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 				AC7AD61C2668F83D00500922 /* vas_delay.h */,
 				E4B4F704249A6DD00065E4A4 /* vas_osc.c */,
 				E4B4F705249A6DD00065E4A4 /* vas_osc.h */,
-				841712CB2091E46A00B02D54 /* rtap_osc6delay.c */,
+				841712CB2091E46A00B02D54 /* rtap_osc6_delay.c */,
 				E46AFD0B249212A700EEDF61 /* vas_mem.c */,
 				E46AFD0E249212AD00EEDF61 /* vas_mem.h */,
 				E46AFD0F249212AD00EEDF61 /* vas_util.h */,
@@ -123,7 +123,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FA2927E71A899B4C005A2BA9 /* Build configuration list for PBXProject "rtap_osc6delay" */;
+			buildConfigurationList = FA2927E71A899B4C005A2BA9 /* Build configuration list for PBXProject "rtap_osc6_delay" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -147,7 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC7AD61D2668F83D00500922 /* vas_delay.c in Sources */,
-				841712CC2091E46A00B02D54 /* rtap_osc6delay.c in Sources */,
+				841712CC2091E46A00B02D54 /* rtap_osc6_delay.c in Sources */,
 				E46AFD0C249212A700EEDF61 /* vas_mem.c in Sources */,
 				E4B4F706249A6DD00065E4A4 /* vas_osc.c in Sources */,
 			);
@@ -299,7 +299,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA2927E71A899B4C005A2BA9 /* Build configuration list for PBXProject "rtap_osc6delay" */ = {
+		FA2927E71A899B4C005A2BA9 /* Build configuration list for PBXProject "rtap_osc6_delay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA2927EE1A899B4C005A2BA9 /* Debug */,
