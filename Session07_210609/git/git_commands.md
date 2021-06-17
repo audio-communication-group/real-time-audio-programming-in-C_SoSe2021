@@ -184,7 +184,7 @@ Its good practice to have at least this minimal structure: MASTER <---> DEVELOPM
 
 `$ git branch DEVELOPMENT_BRANCH`
 
-`$ git branch FEATURE_BRANCH`
+`$ git branch FEATUREBRANCH`
 
 
 Show all branches.
@@ -192,9 +192,10 @@ Show all branches.
 `$ git branch -a -v`
 
 
-Then make a branch to work with.
-
-`$ git checkout -b WORKING_COPY`
+Then make a branch from master to work with.
+`$ git checkout -b FEATUREBRANCH master`   
+FEATUREBRANCH is typically named "feature/my-feature"  
+`$ git checkout -b feature/my-feature master`
 
 
 Double check where you are.
@@ -202,30 +203,30 @@ Double check where you are.
 `$ git status`
 
 
-After your work all is fine and you may wish to merge into your `FEATURE_BRANCH`, first switch into your branch you wish to merge in.
+After your work all is fine and you may wish to merge into your `FEATUREBRANCH`, first switch into your branch you wish to merge in.
 
-`$ git checkout FEATURE_BRANCH`
+`$ git checkout FEATUREBRANCH`
 
 Show changes.
 
-`$ git diff FEATURE_BRANCH WORKING_COPY`
+`$ git diff FEATUREBRANCH WORKINGCOPY`
 
-Merge WORKING_COPY into FEATURE_BRANCH.
+Merge WORKINGCOPY into FEATUREBRANCH.
 
-`$ git merge WORKING_COPY`
+`$ git merge WORKINGCOPY`
 
 
-If you want, you can delete your WORKING_COPY.
+If you want, you can delete your WORKINGCOPY.
 
-`$ git branch -d WORKING_COPY`
+`$ git branch -d WORKINGCOPY`
 
 Delete local branch (force).
 
-`$ git branch -D WORKING_COPY`
+`$ git branch -D WORKINGCOPY`
 
-Delete the remote WORKING_COPY.
+Delete the remote WORKINGCOPY.
 
-`$ git push origin --delete WORKING_COPY`
+`$ git push origin --delete WORKINGCOPY`
 
 Check if there are more branches that are not merged already.
 
@@ -331,17 +332,6 @@ or with showing branches and merges in ASCII.
 `$ git log --pretty=format:"%h %s" --graph`
 
 `$ git log --pretty=format:"%h - %an, %ar : %s"  --graph`
-
-
-### Overwrite master with contents of feature branch (feature > master)
-`$ git checkout feature    	# source name`
-
-`$ git merge -s ours master  	# target name`
-
-`$ git checkout master       	# target name`
-
-`$ git merge feature      	# source name`
-
 
 
 ### Filter in time
@@ -457,6 +447,16 @@ With `rebase` you can move branches and merge them in one step into a new base t
 If you running in conflicts, use 
 
 `$ git mergetool` to fix them.
+
+
+### Overwrite master with contents of feature branch (feature > master)
+`$ git checkout feature    	# source name`
+
+`$ git merge -s ours master  	# target name`
+
+`$ git checkout master       	# target name`
+
+`$ git merge feature      	# source name`
 
 
 ### Use a LAN git e. g. Raspberry Pi
