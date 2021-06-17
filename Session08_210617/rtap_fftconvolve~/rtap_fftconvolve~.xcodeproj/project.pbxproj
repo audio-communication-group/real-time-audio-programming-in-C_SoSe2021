@@ -1,0 +1,348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E433226B267B27D60049CB8F /* rtap_fftconvolve~.c in Sources */ = {isa = PBXBuildFile; fileRef = E4332269267B27CB0049CB8F /* rtap_fftconvolve~.c */; };
+		E433226E267B286D0049CB8F /* rtap_fftconvolve_filter.h in Headers */ = {isa = PBXBuildFile; fileRef = E433226C267B286D0049CB8F /* rtap_fftconvolve_filter.h */; };
+		E433226F267B286D0049CB8F /* rtap_fftconvolve_filter.c in Sources */ = {isa = PBXBuildFile; fileRef = E433226D267B286D0049CB8F /* rtap_fftconvolve_filter.c */; };
+		E4332276267B55830049CB8F /* rtap_fftconvolve_input.h in Headers */ = {isa = PBXBuildFile; fileRef = E4332274267B55830049CB8F /* rtap_fftconvolve_input.h */; };
+		E4332277267B55830049CB8F /* rtap_fftconvolve_input.c in Sources */ = {isa = PBXBuildFile; fileRef = E4332275267B55830049CB8F /* rtap_fftconvolve_input.c */; };
+		E4332279267B80BC0049CB8F /* kiss_fftr.c in Sources */ = {isa = PBXBuildFile; fileRef = E4332278267B80BC0049CB8F /* kiss_fftr.c */; };
+		E433227B267B80ED0049CB8F /* kiss_fft.c in Sources */ = {isa = PBXBuildFile; fileRef = E433227A267B80ED0049CB8F /* kiss_fft.c */; };
+		E46AFD0C249212A700EEDF61 /* vas_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = E46AFD0B249212A700EEDF61 /* vas_mem.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		844237651FB4A69D005ACA50 /* m_pd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = m_pd.h; sourceTree = "<group>"; };
+		E4332269267B27CB0049CB8F /* rtap_fftconvolve~.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "rtap_fftconvolve~.c"; sourceTree = "<group>"; };
+		E433226C267B286D0049CB8F /* rtap_fftconvolve_filter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rtap_fftconvolve_filter.h; sourceTree = "<group>"; };
+		E433226D267B286D0049CB8F /* rtap_fftconvolve_filter.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = rtap_fftconvolve_filter.c; sourceTree = "<group>"; };
+		E4332274267B55830049CB8F /* rtap_fftconvolve_input.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rtap_fftconvolve_input.h; sourceTree = "<group>"; };
+		E4332275267B55830049CB8F /* rtap_fftconvolve_input.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = rtap_fftconvolve_input.c; sourceTree = "<group>"; };
+		E4332278267B80BC0049CB8F /* kiss_fftr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = kiss_fftr.c; path = kissfft/tools/kiss_fftr.c; sourceTree = "<group>"; };
+		E433227A267B80ED0049CB8F /* kiss_fft.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = kiss_fft.c; path = kissfft/kiss_fft.c; sourceTree = "<group>"; };
+		E46AFD0B249212A700EEDF61 /* vas_mem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vas_mem.c; sourceTree = "<group>"; };
+		E46AFD0E249212AD00EEDF61 /* vas_mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vas_mem.h; sourceTree = "<group>"; };
+		E46AFD0F249212AD00EEDF61 /* vas_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vas_util.h; sourceTree = "<group>"; };
+		FA2927EC1A899B4C005A2BA9 /* rtap_fftconvolve~.pd_darwin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "rtap_fftconvolve~.pd_darwin"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA2927E91A899B4C005A2BA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		844237731FB4A6E1005ACA50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA2927E31A899B4C005A2BA9 = {
+			isa = PBXGroup;
+			children = (
+				E4332278267B80BC0049CB8F /* kiss_fftr.c */,
+				E433227A267B80ED0049CB8F /* kiss_fft.c */,
+				E4332269267B27CB0049CB8F /* rtap_fftconvolve~.c */,
+				E433226C267B286D0049CB8F /* rtap_fftconvolve_filter.h */,
+				E433226D267B286D0049CB8F /* rtap_fftconvolve_filter.c */,
+				E4332274267B55830049CB8F /* rtap_fftconvolve_input.h */,
+				E4332275267B55830049CB8F /* rtap_fftconvolve_input.c */,
+				E46AFD0B249212A700EEDF61 /* vas_mem.c */,
+				E46AFD0E249212AD00EEDF61 /* vas_mem.h */,
+				E46AFD0F249212AD00EEDF61 /* vas_util.h */,
+				844237651FB4A69D005ACA50 /* m_pd.h */,
+				FA2927ED1A899B4C005A2BA9 /* Products */,
+				844237731FB4A6E1005ACA50 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FA2927ED1A899B4C005A2BA9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA2927EC1A899B4C005A2BA9 /* rtap_fftconvolve~.pd_darwin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FA2927EA1A899B4C005A2BA9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4332276267B55830049CB8F /* rtap_fftconvolve_input.h in Headers */,
+				E433226E267B286D0049CB8F /* rtap_fftconvolve_filter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		FA2927EB1A899B4C005A2BA9 /* rtap_fftconvolve~ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA2927F01A899B4C005A2BA9 /* Build configuration list for PBXNativeTarget "rtap_fftconvolve~" */;
+			buildPhases = (
+				FA2927E81A899B4C005A2BA9 /* Sources */,
+				FA2927E91A899B4C005A2BA9 /* Frameworks */,
+				FA2927EA1A899B4C005A2BA9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "rtap_fftconvolve~";
+			productName = "HelloWorld-pd-external";
+			productReference = FA2927EC1A899B4C005A2BA9 /* rtap_fftconvolve~.pd_darwin */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA2927E41A899B4C005A2BA9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Intrinsic Audio";
+				TargetAttributes = {
+					FA2927EB1A899B4C005A2BA9 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = FA2927E71A899B4C005A2BA9 /* Build configuration list for PBXProject "rtap_fftconvolve~" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA2927E31A899B4C005A2BA9;
+			productRefGroup = FA2927ED1A899B4C005A2BA9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA2927EB1A899B4C005A2BA9 /* rtap_fftconvolve~ */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA2927E81A899B4C005A2BA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4332277267B55830049CB8F /* rtap_fftconvolve_input.c in Sources */,
+				E433227B267B80ED0049CB8F /* kiss_fft.c in Sources */,
+				E433226F267B286D0049CB8F /* rtap_fftconvolve_filter.c in Sources */,
+				E433226B267B27D60049CB8F /* rtap_fftconvolve~.c in Sources */,
+				E46AFD0C249212A700EEDF61 /* vas_mem.c in Sources */,
+				E4332279267B80BC0049CB8F /* kiss_fftr.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FA2927EE1A899B4C005A2BA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "/Applications/Pd-0.50-2.app/Contents/Resources/extra ";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FA2927EF1A899B4C005A2BA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "/Applications/Pd-0.50-2.app/Contents/Resources/extra ";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FA2927F11A899B4C005A2BA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_OPTIMIZATION_PROFILE_FILE = "";
+				DSTROOT = "/Applications/Pd-0.50-0.app/Contents/Resources/extra";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = pd_darwin;
+				EXECUTABLE_PREFIX = "";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					PUREDATA,
+					VAS_OUTPUTVECTOR_USE_FLOAT,
+					VAS_INPUTVECTOR_USE_FLOAT,
+				);
+				INSTALL_PATH = /;
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_NAME = "rtap_fftconvolve~";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/kissfft/tools\" \"$(SRCROOT)/kissfft\"";
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		FA2927F21A899B4C005A2BA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_OPTIMIZATION_PROFILE_FILE = "";
+				DSTROOT = "/Applications/Pd-0.50-0.app/Contents/Resources/extra";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = pd_darwin;
+				EXECUTABLE_PREFIX = "";
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					PUREDATA,
+					VAS_OUTPUTVECTOR_USE_FLOAT,
+					VAS_INPUTVECTOR_USE_FLOAT,
+				);
+				INSTALL_PATH = /;
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_NAME = "rtap_fftconvolve~";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/kissfft/tools\" \"$(SRCROOT)/kissfft\"";
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA2927E71A899B4C005A2BA9 /* Build configuration list for PBXProject "rtap_fftconvolve~" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA2927EE1A899B4C005A2BA9 /* Debug */,
+				FA2927EF1A899B4C005A2BA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA2927F01A899B4C005A2BA9 /* Build configuration list for PBXNativeTarget "rtap_fftconvolve~" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA2927F11A899B4C005A2BA9 /* Debug */,
+				FA2927F21A899B4C005A2BA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA2927E41A899B4C005A2BA9 /* Project object */;
+}
