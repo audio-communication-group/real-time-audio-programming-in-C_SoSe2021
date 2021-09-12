@@ -334,7 +334,7 @@ or with showing branches and merges in ASCII.
 `$ git log --pretty=format:"%h - %an, %ar : %s"  --graph`
 
 
-### Filter in time
+## Filter in time
 `$ git log --since=1.weeks`
 
 `$ git log --since=2.days`
@@ -346,7 +346,7 @@ or with showing branches and merges in ASCII.
 `$ git log --pretty=format:"%h - %an, %ar : %s"  --graph --since=2.days`
 
 
-### Show the last commit
+## Show the last commit
 `$ git rev-parse --short HEAD` or 
 
 `$ git show -s --format=%h` or
@@ -358,12 +358,12 @@ or with showing branches and merges in ASCII.
 `$ git show -s --format=%H` for full hash
 
 
-### You can make a own shortcut(s)
+## You can make a own shortcut(s)
 `$ git config --global alias.lastcommit "rev-parse HEAD"`
 
 `$ git lastcommit`
 
-### Reset vs. revert
+## Reset vs. revert
 With `reset` all later commit(s) will be gone, you can just go back - history will be changed (use on private branch only).
 
 `$ git reset HASH_OF_AN_EARLIER_COMMIT` 
@@ -375,17 +375,17 @@ With `revert` you will make a new commit with the content of the earlier commit,
 
 You can use relative address with HEAD or a commit hash.
 
-### Now go back to an earlier commit
+## Go back to an earlier commit
 Choose your commit, copy the hash.
 
 `$ git log --pretty=format:"%h - %an, %ar : %s"  --graph`
 
 
-### Just switching without making any changes
+## Just switching without making any changes
 `$ git checkout HASH_OF_COMMIT_TO_GO_BACK`
 
 
-### Reset
+## Reset
 `$ git checkout BRANCH`
 
 `$ git reset HEAD~1` resets to the grandparent of the HEAD commit
@@ -394,7 +394,7 @@ Choose your commit, copy the hash.
 
 `$ git reset HASH`   resets to the hash's commit
 
-### Revert
+## Revert
 `$ git checkout BRANCH`
 
 `$ git revert HEAD^1` reverts to the parent of the HEAD commit
@@ -402,7 +402,7 @@ Choose your commit, copy the hash.
 `$ git revert HASH`   reverts to the hash's commit
 
 
-### Stash
+## Stash
 Situation: The phone rings in the middle of your work and you are told you need to make some corrections in another branch. If you are not ready to commit your current work now, you can stash it.
 
 `$ git stash`
@@ -434,14 +434,7 @@ If you want discard a stash you can drop it ...
 `$ git stash clear`
 
 
-### Prune
-
-Situation: You want to delete stale references to remote branches that don't exist anymore on the specified remote repository. Local branches will not affected.
-
-`$ git remote prune origin`
-
-
-### Rebase
+## Rebase
 Situation: While you're working on your feature, the master is updated by someone else.
 Now you want to integrate the new master updates into your feature branch.
 With `rebase` you can move branches and merge them in one step into a new base to make the history linear again. 
@@ -456,7 +449,7 @@ If you running in conflicts, use
 `$ git mergetool` to fix them.
 
 
-### Overwrite master with contents of feature branch (feature > master)
+## Overwrite master with contents of feature branch (feature > master)
 `$ git checkout feature    	# source name`
 
 `$ git merge -s ours master  	# target name`
@@ -466,7 +459,14 @@ If you running in conflicts, use
 `$ git merge feature      	# source name`
 
 
-### Use a LAN git e. g. Raspberry Pi
+## Prune
+
+Situation: You want to delete stale references to remote branches that don't exist anymore on the specified remote repository. Local branches will not affected.
+
+`$ git remote prune origin`
+
+
+## Use a LAN git e. g. Raspberry Pi or home server
 
 First: On both machines enable and configure ssh !
 
