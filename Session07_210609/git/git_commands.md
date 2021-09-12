@@ -434,6 +434,13 @@ If you want discard a stash you can drop it ...
 `$ git stash clear`
 
 
+### Prune
+
+Situation: You want to delete stale references to remote branches that don't exist anymore on the specified remote repository. Local branches will not affected.
+
+`$ git remote prune origin`
+
+
 ### Rebase
 Situation: While you're working on your feature, the master is updated by someone else.
 Now you want to integrate the new master updates into your feature branch.
