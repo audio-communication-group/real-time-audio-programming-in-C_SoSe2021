@@ -266,6 +266,15 @@ Delete the `<OLD_NAME>` remote branch.
 
 `git push origin --delete <OLD_NAME>`
 
+## Delete a branch (local or remote)
+To delete a local branch
+
+`git branch -d <LOCAL_BRANCH>`
+
+To remove a remote branch (if you know what you are doing!)
+
+`git push origin --delete <LOCAL_BRANCH>`
+
 
 ## Submodules
 Add a submodule to your repository.
