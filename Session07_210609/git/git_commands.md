@@ -245,6 +245,17 @@ Get information about X commits before HEAD.
 
 `$ git show HEAD~X`
 
+
+## Delete a branch (local or remote)
+To delete a local branch
+
+`git branch -d <LOCAL_BRANCH>`
+
+To remove a remote branch (if you know what you are doing!)
+
+`git push origin --delete <LOCAL_BRANCH>`
+
+
 ## Rename local and remote branch
 Start by switching to the local branch which you want to rename.
 
@@ -265,15 +276,6 @@ Push the `<NEW_NAME>` local branch and reset the upstream branch.
 Delete the `<OLD_NAME>` remote branch.
 
 `git push origin --delete <OLD_NAME>`
-
-## Delete a branch (local or remote)
-To delete a local branch
-
-`git branch -d <LOCAL_BRANCH>`
-
-To remove a remote branch (if you know what you are doing!)
-
-`git push origin --delete <LOCAL_BRANCH>`
 
 
 ## Submodules
