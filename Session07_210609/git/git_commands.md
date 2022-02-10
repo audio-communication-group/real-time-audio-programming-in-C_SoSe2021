@@ -103,7 +103,7 @@ Show your remote connection.
 Till now, all is proceeded locally.
 Loading the files to the server will make them available for others.
 
-`$ git push origin master`
+`$ git push origin main`
 
 
 At beginning your work, get a fresh copy first.
@@ -135,7 +135,7 @@ Verify it's gone
 ## Push, pull and clone
 Push to remote and link local repository with remote so git pull can be used without arguments:
 
-`$ git push –u origin master` (-u links the local repository with the remote)
+`$ git push –u origin main` (-u links the local repository with the remote)
 
 origin is an alias for the remote, only needed once, after that simply use:
 `$ git push`
@@ -175,10 +175,10 @@ Use nano vi or emacs for editing:
 Now all html files will be excluded from staging
 
 ## Branches I
-Its good practice to have at least this minimal structure: MASTER <---> DEVELOPMENT <---> FEATURE.
+Its good practice to have at least this minimal structure: MAIN <---> DEVELOPMENT <---> FEATURE.
 
-  * The master branch should always contain working minor versions
-  * The development branch holds the working new features, that are not published or merged into the master branch
+  * The main branch should always contain working minor versions
+  * The development branch holds the working new features, that are not published or merged into the main branch
   * The feature branch(es) are holding separated features under development
 
 
@@ -192,10 +192,10 @@ Show all branches.
 `$ git branch -a -v`
 
 
-Then make a branch from master to work with.
-`$ git checkout -b FEATUREBRANCH master`   
+Then make a branch from main to work with.
+`$ git checkout -b FEATUREBRANCH MAIN`   
 FEATUREBRANCH is typically named "feature/my-feature"  
-`$ git checkout -b feature/my-feature master`
+`$ git checkout -b feature/my-feature main`
 
 
 Double check where you are.
@@ -446,13 +446,13 @@ If you want discard a stash you can drop it ...
 
 
 ## Rebase
-Situation: While you're working on your feature, the master is updated by someone else.
-Now you want to integrate the new master updates into your feature branch.
+Situation: While you're working on your feature, the main is updated by someone else.
+Now you want to integrate the new main updates into your feature branch.
 With `rebase` you can move branches and merge them in one step into a new base to make the history linear again. 
 
 *Note: This will change the history and should only be done at your local branch*
 
-`$ git rebase MASTER_BASE`
+`$ git rebase MAIN_BASE`
 
 
 If you running in conflicts, use 
@@ -460,12 +460,12 @@ If you running in conflicts, use
 `$ git mergetool` to fix them.
 
 
-## Overwrite master with contents of feature branch (feature > master)
+## Overwrite main with contents of feature branch (feature > main)
 `$ git checkout feature    	# source name`
 
-`$ git merge -s ours master  	# target name`
+`$ git merge -s ours main  	# target name`
 
-`$ git checkout master       	# target name`
+`$ git checkout main       	# target name`
 
 `$ git merge feature      	# source name`
 
