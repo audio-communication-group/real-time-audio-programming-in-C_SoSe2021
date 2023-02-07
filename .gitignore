@@ -61,4 +61,5 @@ Mkfile.old
 dkms.con
 
 #IDEs
-.vscode/
+**/.vscode/
+**/project.xcworkspace
