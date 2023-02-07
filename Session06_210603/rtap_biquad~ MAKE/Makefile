@@ -10,7 +10,7 @@
 
 lib.name = rtap_biquad
 
-# input source file (class name == source file basename)
+# input source file (class name == source filen basename)
 class.sources = rtap_biquad~.c
 rtap_biquad~.class.sources = vas_iir_biquad.c
 rtap_biquad~.class.sources += vas_mem.c
@@ -28,3 +28,4 @@ include $(PDLIBBUILDER_DIR)/Makefile.pdlibbuilder
 
 
 
+4c0um0n4c0um0n
