@@ -33,7 +33,7 @@ Add file to index.
 `$ git add README.md`
 
 
-Add all (added/changed) files at ones to index.
+Or add all (added/changed) files at ones to index.
 
 `$ git add .`
 
@@ -42,13 +42,6 @@ Commit the added file(s) to the HEAD
 
 `$ git commit -m "README added - first commit"`
 
-
-## Creating a repository
-Create a remote repository via command line and/or in the Browser on github.com. Remote repository:
-
-`$ curl -u 'funkerresch' https://api.github.com/user/repos -d '{"name":"realtimeaudioprogramming"}'`
-
-*Note: You may need a password, depending on the repository setting*
 
 ## The easiest way to create local and remote repository
 Create a remote repository online including readme.md
