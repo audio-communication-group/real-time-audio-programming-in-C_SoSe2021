@@ -267,7 +267,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_OPTIMIZATION_PROFILE_FILE = "";
-				DSTROOT = "/Applications/Pd-0.50-0.app/Contents/Resources/extra";
+				DSTROOT = "/Applications/Pd-0.53-0.app/Contents/Resources/extra";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_EXTENSION = pd_darwin;
@@ -296,7 +296,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_OPTIMIZATION_PROFILE_FILE = "";
-				DSTROOT = "/Applications/Pd-0.50-0.app/Contents/Resources/extra";
+				DSTROOT = "/Applications/Pd-0.53-0.app/Contents/Resources/extra";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_EXTENSION = pd_darwin;

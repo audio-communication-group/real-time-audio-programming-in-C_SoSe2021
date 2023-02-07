@@ -14,9 +14,9 @@
             filePath = "rtap_osc6_delay.c"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "rtap_osc6_delay_tilde_new(f, d)"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "rtap_osc6_delay_tilde_setEnvelopeTable(x, name)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>

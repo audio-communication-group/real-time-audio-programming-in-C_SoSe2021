@@ -46,8 +46,8 @@
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedDebuggerIdentifier = ""
+      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -56,7 +56,7 @@
       allowLocationSimulation = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
-         FilePath = "/Applications/Pd-0.50-2.app/Contents/Resources/bin/pd">
+         FilePath = "/Applications/Pd-0.53-0.app/Contents/Resources/bin/pd">
       </PathRunnable>
       <MacroExpansion>
          <BuildableReference
@@ -69,7 +69,7 @@
       </MacroExpansion>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "-open /Users/mrmarkuese/Documents/TUB/Lehre/SoSe_2021/real-time-audio-programming-in-C_SoSe2021/Session06_210603/rtap_fftin~/rtap_fftin~_help.pd"
+            argument = "-open /Users/mrmarkuese/Documents/TUB/Lehre/SoSe_2021/real-time-audio-programming-in-C_SoSe2021/Session08_210617/rtap_fftconvolve~/rtap_fftconvolve~-help.pd"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
