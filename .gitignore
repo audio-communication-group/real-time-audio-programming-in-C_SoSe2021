@@ -58,4 +58,7 @@
 modules.order
 Module.symvers
 Mkfile.old
-dkms.conf
+dkms.con
+
+#IDEs
+.vscode/
