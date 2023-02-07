@@ -283,6 +283,13 @@ Add a submodule to your repository.
 
 `$ git submodule add PATH/TO/SUBMODULE`
 
+or
+
+```
+git submodule add -f -b BRANCH REPO_URL DESTINATION_FOLDER
+```
+e. g.: `git submodule add -f -b master https://github.com/me-no-dev/ESPAsyncWebServer.git lib/ESPAsyncWebServer`
+
 Remove submodule from your repository.
 
 
@@ -300,6 +307,12 @@ Update submodule:
 
 ```
 $ git pull --recurse-submodules
+```
+
+or
+
+```
+git submodule foreach git pull
 ```
 
 or
