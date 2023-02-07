@@ -3,7 +3,8 @@
 ## No Flow ##
 * Everyone just commits directly to master without using branches.
 * We do not recommend this for collaborating in this course (but you can use this e.g. for backup purposes)
-![No Flow](./no-flow.png "No Flow")
+
+![No Flow](./pics/no-flow.png "No Flow")
 
 ## Git Flow ##
 * created by Vincent Driessen (2010)
@@ -16,7 +17,7 @@
 	* `hotfix-*` - used to act immediatley upon an undesired status of `master`, must merge into `master` and `develop`
 	* `release-*` - preparation of a new production release, branch off from `develop` and must merge into `master` and `develop`
 
-![Git Flow](./git-flow.png "Git Flow")
+![Git Flow](./pics/git-flow.png "Git Flow")
 
 ### Advantages ###
 * ensures a clean state of branches at any moment in life cycle of project
@@ -44,7 +45,7 @@
 	5. after someones review and signed off on the feature, you can merge it into `master`
 	6. once it is merged and pushed to `master`, you can and *should* deploy immediately
 
-![GitHub Flow](./github-flow.png "GitHub Flow")
+![GitHub Flow](./pics/github-flow.png "GitHub Flow")
 ### Advantages ###
 * CD/CI friendly
 * simpler than Git Flow
@@ -77,7 +78,7 @@
 	10. fix bugs in `master` first and release branches second
 	11. commit messages reflect intent
 	
-	![GitLab Flow](./gitlab-flow.png "GitLab Flow")
+	![GitLab Flow](./pics/gitlab-flow.png "GitLab Flow")
 	
 ### Advantages ###
 * defines how to make Continous Integration and Continous Delivery

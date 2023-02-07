@@ -511,6 +511,31 @@ $ cd /PATH/TO/PROJECT_DIR
 $ git clone --local PROJECT_NAME /PATH/TO/GIT_DIR/PROJECT_NAME.git
 ```
 
+### Delete a git history
+ 1.   Checkout
+
+    ```git checkout --orphan latest_branch```
+
+ 2.   Add all the files
+
+    ```git add -A```
+
+ 3.   Commit the changes
+
+    ```git commit -am "commit message"```
+
+ 4.   Delete the branch
+
+    ```git branch -D main```
+
+ 5.  Rename the current branch to main
+
+    ```git branch -m main```
+
+ 6.   Finally, force update your repository
+
+    ```git push -f origin main```
+
 
 ### Git Tag ###
 Git has the ability to tag specific points in a repository’s history as being important.  
