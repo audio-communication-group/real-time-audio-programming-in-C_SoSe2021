@@ -63,3 +63,4 @@ dkms.con
 #IDEs
 **/.vscode/
 **/project.xcworkspace
+**/xcuserdata
