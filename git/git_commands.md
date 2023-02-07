@@ -187,8 +187,8 @@ Show all branches.
 
 Then make a branch from main to work with.
 `$ git checkout -b FEATUREBRANCH MAIN`   
-FEATUREBRANCH is typically named "feature/my-feature"  
-`$ git checkout -b feature/my-feature main`
+FEATUREBRANCH is typically named "feature/my_feature"  
+`$ git checkout -b feature/my_feature main`
 
 
 Double check where you are.
@@ -289,7 +289,7 @@ Remove submodule from your repository.
 ```
 $ git submodule deinit PATH_TO_SUBMODULE
 $ git rm PATH_TO_SUBMODULE
-$ git commit-m "Removed submodule"
+$ git commit -m "Removed submodule"
 ```
 
 Remove submodule from directory.
