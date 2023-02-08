@@ -73,6 +73,11 @@ Stage single files and folders:
 Commit all staged files to local repository:
 
 `$ git commit –m “First Commit”` (-m for commit message)
+
+## Clean
+Clean from untracked files from your working directory
+
+`git clean -xdf`
 	
 ## Connect your local git with a server or add a remote to the local repository
 Connect local repo with server (remote git name must be same as local git name).
