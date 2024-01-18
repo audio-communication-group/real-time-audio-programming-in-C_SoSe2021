@@ -579,13 +579,14 @@ v1.4-lw
 v1.5
 ```
 
-# Find and delete .DS_Store files from the repository
+## Find and delete filesfrom the repository
+### E. g. find .DS_Store files 
 find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
 
-# Commit the changes
+### Commit the changes
 git commit -m "Remove .DS_Store files"
 
-# Push the changes to GitHub
+### Push the changes to GitHub
 git push origin main
 
 read more [here][0] and [here][0]  
