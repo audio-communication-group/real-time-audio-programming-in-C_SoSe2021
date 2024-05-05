@@ -579,7 +579,7 @@ v1.4-lw
 v1.5
 ```
 
-## Find and delete filesfrom the repository
+## Find and delete files from the repository
 E. g. find .DS_Store files 
 `find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch`
 
