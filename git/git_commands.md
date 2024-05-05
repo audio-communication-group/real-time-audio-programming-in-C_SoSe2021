@@ -548,7 +548,7 @@ $ git clone --local PROJECT_NAME /PATH/TO/GIT_DIR/PROJECT_NAME.git
     ```git push -f origin main```
 
 
-### Git Tag ###
+### Git Tag
 Git has the ability to tag specific points in a repository’s history as being important.  
 show tags  
 ```
@@ -580,16 +580,84 @@ v1.5
 ```
 
 ## Find and delete filesfrom the repository
-### E. g. find .DS_Store files 
-find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
+E. g. find .DS_Store files 
+`find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch`
 
-### Commit the changes
-git commit -m "Remove .DS_Store files"
+Commit the changes
+`git commit -m "Remove .DS_Store files"`
 
-### Push the changes to GitHub
+Push the changes to GitHub
+`git push origin main`
+
+### Working in two different branches at the same time
+Create a repository
+
+```
+mkdir repo && cd repo
+
+```
+Init git and make a commit
+
+```
+git init
+echo "This is main content" > README.md
+git add README.md && git commit -m "README.md added"
+```
+Checkout another branch and change the file without committing
+
+```
+git checkout -b feature
+echo "This is feature content" > README.md
+```
+Now you have been told to do a bugfix in main. You can leave your changes in feature branch without commiting or stashing using `git worktree` command...
+
+```
+git worktree add ../bugfix main
+cd ../bugfix
+echo "This is main bugfixed content" > README.md
+git commit -am "Fix critical bug"
+```
+...and go back to your work in feature branch
+```
+cd ../repo
+```
+Next you can do
+```
+## Push ##
+
+# Push the bugfix from the bugfix directory
+cd ../bugfix
 git push origin main
 
-read more [here][0] and [here][0]  
+# Push the feature from the feature directory
+cd ../feature
+git push origin feature
+
+
+## Merge ##
+
+# Switch to the main branch
+cd ..
+git checkout main
+
+# Merge the bugfix
+git merge main
+
+# Merge the feature
+git merge feature
+
+## Delete ##
+
+git worktree remove ../bugfix
+git worktree remove ../feature
+
+
+## push your merged changes to the remote repository ##
+
+git push origin main
+```
+---
+:information_source: **Info:**   more [here][0] and [here][0]  
 
 to be continued...
 
