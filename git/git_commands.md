@@ -7,7 +7,7 @@ Git has three main states that your files can reside in: committed, modified, an
 * Modified means that you have changed the file but have not committed it to your database yet.
 * Staged means that you have marked a modified file in its current version to go into your next commit snapshot.
 
-## Basic Git Workflow 
+### Basic Git Workflow 
 
 * Create a new or checkout an existing repository.
 - Modify/add/delete files.
@@ -15,7 +15,7 @@ Git has three main states that your files can reside in: committed, modified, an
 * You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
 * If working with a remote, you push local changes to the remote.
 
-## Initialize a local git and commit
+### Initialize a local git and commit
 New git.
 
 `$ mkdir MY_PROJECT && cd MY_PROJECT`
@@ -43,7 +43,7 @@ Commit the added file(s) to the HEAD
 `$ git commit -m "README added - first commit"`
 
 
-## The easiest way to create local and remote repository
+### The easiest way to create local and remote repository
 Create a remote repository online including readme.md
 Copy the link to the repository
 
@@ -52,7 +52,7 @@ Copy the link to the repository
 `$ git clone https://github.com/LINK/TO/YOUR/REMOTE/REPOSITORY`
 
 
-## Staging files
+### Staging files
 Stage everything according to the local directory structure including new, modified and deleted files):
 
 `$ git add –A`
@@ -69,17 +69,17 @@ Stage single files and folders:
 
 `$ git add <filename> git add <foldername>`
 	
-## Commit	
+### Commit	
 Commit all staged files to local repository:
 
 `$ git commit –m “First Commit”` (-m for commit message)
 
-## Clean
+### Clean
 Clean from untracked files from your working directory
 
 `git clean -xdf`
 	
-## Connect your local git with a server or add a remote to the local repository
+### Connect your local git with a server or add a remote to the local repository
 Connect local repo with server (remote git name must be same as local git name).
 
 `$ git remote add origin <server_address>`
@@ -108,7 +108,7 @@ At beginning your work, get a fresh copy first.
 
 `$ git pull`
 
-## Delete remote
+### Delete remote
 View current remotes
 
 `$ git remote -v`
@@ -130,7 +130,7 @@ Verify it's gone
 > origin  https://github.com/OWNER/REPOSITORY.git (fetch)
 > origin  https://github.com/OWNER/REPOSITORY.git (push)
 
-## Push, pull and clone
+### Push, pull and clone
 Push to remote and link local repository with remote so git pull can be used without arguments:
 
 `$ git push –u origin main` (-u links the local repository with the remote)
@@ -146,7 +146,7 @@ Download and inits a new local repository from PATH/TO/REPOSITORY:
 
 `$ git clone PATH/TO/REPOSITORY`
 
-## Git status information to show aliases of your remote server:
+### Git status information to show aliases of your remote server:
 `$ git remote –v`
 
 Get general status information:
@@ -162,7 +162,7 @@ General information about HEAD:
 `$ git show HEAD`
 
 
-## Gitignore
+### Gitignore
 Create `.gitignore` file with 
 
 `$ touch .gitignore` (under linux and osx it will be invisible) in the Root directory of your repository.
@@ -172,7 +172,7 @@ Use nano vi or emacs for editing:
 `*.html` and save the file.
 Now all html files will be excluded from staging
 
-## Branches I
+### Branches I
 Its good practice to have at least this minimal structure: MAIN <---> DEVELOPMENT <---> FEATURE.
 
   * The main branch should always contain working minor versions
@@ -230,7 +230,7 @@ Check if there are more branches that are not merged already.
 
 `$ git branch --no-merged`
 
-## Branches II
+### Branches II
 To check out commit id and create a new branch of it.
 
 `$ git checkout -b <NEW BRANCH> <COMMITID>`
@@ -244,7 +244,7 @@ Get information about X commits before HEAD.
 `$ git show HEAD~X`
 
 
-## Delete a branch (local or remote)
+### Delete a branch (local or remote)
 To delete a local branch
 
 `git branch -d <LOCAL_BRANCH>`
@@ -254,7 +254,7 @@ To remove a remote branch (if you know what you are doing!)
 `git push origin --delete <LOCAL_BRANCH>`
 
 
-## Rename local and remote branch
+### Rename local and remote branch
 Start by switching to the local branch which you want to rename.
 
 `git checkout <OLD_NAME>`
@@ -276,7 +276,7 @@ Delete the `<OLD_NAME>` remote branch.
 `git push origin --delete <OLD_NAME>`
 
 
-## Submodules
+### Submodules
 Add a submodule to your repository.
 
 `$ git submodule add PATH/TO/SUBMODULE`
@@ -324,7 +324,7 @@ or, if submodule dir was deleted before
 $ git submodule update --init --recursive
 ```
 
-## Removing  uncommited changes
+### Removing  uncommited changes
 In the case, you try want to remove all untracked changes in your BRANCH.
 
 `$ git checkout -- *`
@@ -334,7 +334,7 @@ Or just the changes in one file.
 `$ git checkout -- FILE_NAME`
 
 
-## Removing  commited changes
+### Removing  commited changes
 First view history and get the hash of your commit(s).
 
 `$ git log`
@@ -356,7 +356,7 @@ or with showing branches and merges in ASCII.
 `$ git log --pretty=format:"%h - %an, %ar : %s"  --graph`
 
 
-## Filter in time
+### Filter in time
 `$ git log --since=1.weeks`
 
 `$ git log --since=2.days`
@@ -368,7 +368,7 @@ or with showing branches and merges in ASCII.
 `$ git log --pretty=format:"%h - %an, %ar : %s"  --graph --since=2.days`
 
 
-## Show the last commit
+### Show the last commit
 `$ git rev-parse --short HEAD` or 
 
 `$ git show -s --format=%h` or
@@ -380,12 +380,12 @@ or with showing branches and merges in ASCII.
 `$ git show -s --format=%H` for full hash
 
 
-## You can make a own shortcut(s)
+### You can make a own shortcut(s)
 `$ git config --global alias.lastcommit "rev-parse HEAD"`
 
 `$ git lastcommit`
 
-## Reset vs. revert
+### Reset vs. revert
 With `reset` all later commit(s) will be gone, you can just go back - history will be changed (use on private branch only).
 
 `$ git reset HASH_OF_AN_EARLIER_COMMIT` 
@@ -397,17 +397,17 @@ With `revert` you will make a new commit with the content of the earlier commit,
 
 You can use relative address with HEAD or a commit hash.
 
-## Go back to an earlier commit
+### Go back to an earlier commit
 Choose your commit, copy the hash.
 
 `$ git log --pretty=format:"%h - %an, %ar : %s"  --graph`
 
 
-## Just switching without making any changes
+### Just switching without making any changes
 `$ git checkout HASH_OF_COMMIT_TO_GO_BACK`
 
 
-## Reset
+### Reset
 `$ git checkout BRANCH`
 
 `$ git reset HEAD~1` resets to the grandparent of the HEAD commit
@@ -416,7 +416,7 @@ Choose your commit, copy the hash.
 
 `$ git reset HASH`   resets to the hash's commit
 
-## Revert
+### Revert
 `$ git checkout BRANCH`
 
 `$ git revert HEAD^1` reverts to the parent of the HEAD commit
@@ -424,7 +424,7 @@ Choose your commit, copy the hash.
 `$ git revert HASH`   reverts to the hash's commit
 
 
-## Stash
+### Stash
 Situation: The phone rings in the middle of your work and you are told you need to make some corrections in another branch. If you are not ready to commit your current work now, you can stash it.
 
 `$ git stash`
@@ -456,7 +456,7 @@ If you want discard a stash you can drop it ...
 `$ git stash clear`
 
 
-## Rebase
+### Rebase
 Situation: While you're working on your feature, the main is updated by someone else.
 Now you want to integrate the new main updates into your feature branch.
 With `rebase` you can move branches and merge them in one step into a new base to make the history linear again. 
@@ -471,7 +471,7 @@ If you running in conflicts, use
 `$ git mergetool` to fix them.
 
 
-## Overwrite main with contents of feature branch (feature > main)
+### Overwrite main with contents of feature branch (feature > main)
 `$ git checkout feature    	# source name`
 
 `$ git merge -s ours main  	# target name`
@@ -481,14 +481,14 @@ If you running in conflicts, use
 `$ git merge feature      	# source name`
 
 
-## Prune
+### Prune
 
 Situation: You want to delete stale references to remote branches that don't exist anymore on the specified remote repository. Local branches will not affected.
 
 `$ git remote prune origin`
 
 
-## Use a LAN git e. g. Raspberry Pi or home server
+### Use a LAN git e. g. Raspberry Pi or home server
 
 First: On both machines enable and configure ssh !
 
@@ -579,7 +579,7 @@ v1.4-lw
 v1.5
 ```
 
-## Find and delete files from the repository
+### Find and delete files from the repository
 E. g. find .DS_Store files 
 `find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch`
 
