@@ -277,6 +277,10 @@ Delete the `<OLD_NAME>` remote branch.
 
 
 ### Submodules
+List all submodules and remote URLs
+
+`git submodule foreach --recursive git remote get-url origin`
+
 Add a submodule to your repository.
 
 `$ git submodule add PATH/TO/SUBMODULE`
