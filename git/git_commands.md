@@ -243,6 +243,22 @@ Get information about X commits before HEAD.
 
 `$ git show HEAD~X`
 
+### Test a merge without making changes (like dry run)
+Simulate a `dry run` modus.
+
+`git merge --no-commit --no-ff develop`
+
+Check changes
+
+`git diff`
+
+Or if you have difftool configured.
+
+`git difftool`
+
+Abort merge if you dont want to apply it.
+
+`git merge --abort`
 
 ### Delete a branch (local or remote)
 To delete a local branch
