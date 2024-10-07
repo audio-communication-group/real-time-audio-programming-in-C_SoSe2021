@@ -317,9 +317,10 @@ e. g.: `git submodule add -f -b master https://github.com/me-no-dev/ESPAsyncWebS
 2. **Remove the submodule from the Git configuration:**
    Run the following command to remove the submodule from the Git configuration:
 
-   ```bash
-   git submodule deinit -f --path/to/submodule
-   ```
+```bash
+git submodule deinit -f --path/to/submodule
+```
+
 3. **Remove the submodule from the working directory and staging area:**
 Delete the submodule directory from your working directory:
 ```
@@ -331,11 +332,13 @@ Remove the submodule from Git’s index (tracking) and the staging area:
 ```
 git rm -f path/to/submodule
 ```
+
 5. **Commit the changes:**
 Commit the removal of the submodule:
 ```
 git commit -m "Removed submodule"
 ```
+
 6.  **Optional: Remove submodule references from .git/config:**
 If needed, you can also delete the submodule entry from the .git/config file.
 
@@ -345,12 +348,14 @@ Add the submodule again using the following command:
 ```
 git submodule add https://github.com/username/repository.git path/to/submodule
 ```
+
 2. **Initialize the submodule:**
 Initialize the newly added submodule:
 Update submodule:
 ```
 git submodule update --init --recursive
 ```
+
 3. **Commit the changes:**
 Commit the new submodule addition:
 ```
