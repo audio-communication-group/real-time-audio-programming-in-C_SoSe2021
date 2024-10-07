@@ -308,21 +308,56 @@ git submodule add -f -b BRANCH REPO_URL DESTINATION_FOLDER
 ```
 e. g.: `git submodule add -f -b master https://github.com/me-no-dev/ESPAsyncWebServer.git lib/ESPAsyncWebServer`
 
-Remove submodule from your repository.
+# Remove and re-add a (broken) submodule
+### Removing a Git Submodule:
 
+1. **Remove the submodule from the `.gitmodules` file:**
+   Open the `.gitmodules` file in the root directory of your project and delete the entry of the submodule.
 
+2. **Remove the submodule from the Git configuration:**
+   Run the following command to remove the submodule from the Git configuration:
+
+   ```bash
+   git submodule deinit -f --path/to/submodule
+   ```
+3. **Remove the submodule from the working directory and staging area:**
+Delete the submodule directory from your working directory:
 ```
-$ git submodule deinit PATH_TO_SUBMODULE
-$ git rm PATH_TO_SUBMODULE
-$ git commit -m "Removed submodule"
+rm -rf path/to/submodule
 ```
 
-Remove submodule from directory.
+4. **Untrack the submodule from Git:**
+Remove the submodule from Git’s index (tracking) and the staging area:
+```
+git rm -f path/to/submodule
+```
+5. **Commit the changes:**
+Commit the removal of the submodule:
+```
+git commit -m "Removed submodule"
+```
+6.  **Optional: Remove submodule references from .git/config:**
+If needed, you can also delete the submodule entry from the .git/config file.
 
-`$ rm -rf .git/modules/PATH_TO_SUBMODULE`
-
+### Re-Adding a Git Submodule:
+1. **Add the submodule:**
+Add the submodule again using the following command:
+```
+git submodule add https://github.com/username/repository.git path/to/submodule
+```
+2. **Initialize the submodule:**
+Initialize the newly added submodule:
 Update submodule:
+```
+git submodule update --init --recursive
+```
+3. **Commit the changes:**
+Commit the new submodule addition:
+```
+git commit -m "Added submodule"
+```
 
+# Updating submodules
 ```
 $ git pull --recurse-submodules
 ```
