@@ -336,6 +336,7 @@ git rm -f path/to/submodule
 5. **Commit the changes:**
 Commit the removal of the submodule:
 ```
+git add path/to/submodule
 git commit -m "Removed submodule"
 ```
 
