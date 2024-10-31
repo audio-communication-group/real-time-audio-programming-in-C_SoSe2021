@@ -311,14 +311,14 @@ e. g.: `git submodule add -f -b master https://github.com/me-no-dev/ESPAsyncWebS
 # Remove and re-add a (broken) submodule
 ### Removing a Git Submodule:
 
-1. **Remove the submodule from the `.gitmodules` file:**
+1. **Remove the submodule from the `.gitmodules` file:** 
    Open the `.gitmodules` file in the root directory of your project and delete the entry of the submodule.
 
 2. **Remove the submodule from the Git configuration:**
    Run the following command to remove the submodule from the Git configuration:
 
 ```bash
-git submodule deinit -f --path/to/submodule
+git submodule deinit -f /PATH/TO/SUBMODULE
 ```
 
 3. **Remove the submodule from the working directory and staging area:**
