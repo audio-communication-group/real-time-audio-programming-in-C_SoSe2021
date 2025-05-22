@@ -3,11 +3,11 @@
 
 Git has three main states that your files can reside in: committed, modified, and staged:
 
-* Committed means that the data is safely stored in your local database.
-* Modified means that you have changed the file but have not committed it to your database yet.
-* Staged means that you have marked a modified file in its current version to go into your next commit snapshot.
+* **Committed** means that the data is safely stored in your local database.
+* **Modified** means that you have changed the file but have not committed it to your database yet.
+* **Staged** means that you have marked a modified file in its current version to go into your next commit snapshot.
 
-### Basic Git Workflow 
+## Basic Git Workflow 
 
 * Create a new or checkout an existing repository.
 - Modify/add/delete files.
@@ -15,7 +15,9 @@ Git has three main states that your files can reside in: committed, modified, an
 * You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
 * If working with a remote, you push local changes to the remote.
 
-### Initialize a local git and commit
+---
+
+## Initialize a local git and commit
 New git.
 
 `$ mkdir MY_PROJECT && cd MY_PROJECT`
@@ -42,8 +44,9 @@ Commit the added file(s) to the HEAD
 
 `$ git commit -m "README added - first commit"`
 
+---
 
-### The easiest way to create local and remote repository
+## The easiest way to create local and remote repository
 Create a remote repository online including readme.md
 Copy the link to the repository
 
@@ -51,8 +54,9 @@ Copy the link to the repository
 
 `$ git clone https://github.com/LINK/TO/YOUR/REMOTE/REPOSITORY`
 
+---
 
-### Staging files
+## Staging files
 Stage everything according to the local directory structure including new, modified and deleted files):
 
 `$ git add –A`
@@ -68,18 +72,24 @@ Stage modified and deleted, without new files:
 Stage single files and folders:
 
 `$ git add <filename> git add <foldername>`
-	
-### Commit	
+
+ ---
+ 
+## Commit	
 Commit all staged files to local repository:
 
 `$ git commit –m “First Commit”` (-m for commit message)
 
-### Clean
+---
+
+## Clean
 Clean from untracked files from your working directory
 
 `git clean -xdf`
-	
-### Connect your local git with a server or add a remote to the local repository
+
+ ---
+ 
+## Connect your local git with a server or add a remote to the local repository
 Connect local repo with server (remote git name must be same as local git name).
 
 `$ git remote add origin <server_address>`
@@ -108,7 +118,9 @@ At beginning your work, get a fresh copy first.
 
 `$ git pull`
 
-### Delete remote
+---
+
+## Delete remote
 View current remotes
 
 `$ git remote -v`
@@ -130,7 +142,9 @@ Verify it's gone
 > origin  https://github.com/OWNER/REPOSITORY.git (fetch)
 > origin  https://github.com/OWNER/REPOSITORY.git (push)
 
-### Push, pull and clone
+---
+
+## Push, pull and clone
 Push to remote and link local repository with remote so git pull can be used without arguments:
 
 `$ git push –u origin main` (-u links the local repository with the remote)
@@ -146,7 +160,9 @@ Download and inits a new local repository from PATH/TO/REPOSITORY:
 
 `$ git clone PATH/TO/REPOSITORY`
 
-### Git status information to show aliases of your remote server:
+---
+
+## Git status information to show aliases of your remote server:
 `$ git remote –v`
 
 Get general status information:
@@ -161,8 +177,9 @@ General information about HEAD:
 
 `$ git show HEAD`
 
+---
 
-### Gitignore
+## Gitignore
 Create `.gitignore` file with 
 
 `$ touch .gitignore` (under linux and osx it will be invisible) in the Root directory of your repository.
@@ -172,7 +189,9 @@ Use nano vi or emacs for editing:
 `*.html` and save the file.
 Now all html files will be excluded from staging
 
-### Branches I
+---
+
+## Branches I
 Its good practice to have at least this minimal structure: MAIN <---> DEVELOPMENT <---> FEATURE.
 
   * The main branch should always contain working minor versions
@@ -230,7 +249,9 @@ Check if there are more branches that are not merged already.
 
 `$ git branch --no-merged`
 
-### Branches II
+---
+
+## Branches II
 To check out commit id and create a new branch of it.
 
 `$ git checkout -b <NEW BRANCH> <COMMITID>`
@@ -243,7 +264,9 @@ Get information about X commits before HEAD.
 
 `$ git show HEAD~X`
 
-### Test a merge without making changes (like dry run)
+---
+
+## Test a merge without making changes (like dry run)
 Simulate a `dry run` modus.
 
 `git merge --no-commit --no-ff develop`
@@ -269,8 +292,9 @@ To remove a remote branch (if you know what you are doing!)
 
 `git push origin --delete <LOCAL_BRANCH>`
 
+---
 
-### Rename local and remote branch
+## Rename local and remote branch
 Start by switching to the local branch which you want to rename.
 
 `git checkout <OLD_NAME>`
@@ -291,8 +315,9 @@ Delete the `<OLD_NAME>` remote branch.
 
 `git push origin --delete <OLD_NAME>`
 
+---
 
-### Submodules
+## Submodules
 List all submodules and remote URLs
 
 `git submodule foreach --recursive git remote get-url origin`
@@ -307,6 +332,8 @@ or
 git submodule add -f -b BRANCH REPO_URL DESTINATION_FOLDER
 ```
 e. g.: `git submodule add -f -b master https://github.com/me-no-dev/ESPAsyncWebServer.git lib/ESPAsyncWebServer`
+
+---
 
 # Remove and re-add a (broken) submodule
 ### Removing a Git Submodule:
@@ -415,8 +442,9 @@ or with showing branches and merges in ASCII.
 
 `$ git log --pretty=format:"%h - %an, %ar : %s"  --graph`
 
+---
 
-### Filter in time
+## Filter in time
 `$ git log --since=1.weeks`
 
 `$ git log --since=2.days`
@@ -427,8 +455,9 @@ or with showing branches and merges in ASCII.
 
 `$ git log --pretty=format:"%h - %an, %ar : %s"  --graph --since=2.days`
 
+---
 
-### Show the last commit
+## Show the last commit
 `$ git rev-parse --short HEAD` or 
 
 `$ git show -s --format=%h` or
@@ -439,13 +468,16 @@ or with showing branches and merges in ASCII.
 
 `$ git show -s --format=%H` for full hash
 
+---
 
-### You can make a own shortcut(s)
+## Make your own shortcut(s)
 `$ git config --global alias.lastcommit "rev-parse HEAD"`
 
 `$ git lastcommit`
 
-### Reset vs. revert
+---
+
+## Reset vs. revert
 With `reset` all later commit(s) will be gone, you can just go back - history will be changed (use on private branch only).
 
 `$ git reset HASH_OF_AN_EARLIER_COMMIT` 
@@ -466,8 +498,9 @@ Choose your commit, copy the hash.
 ### Just switching without making any changes
 `$ git checkout HASH_OF_COMMIT_TO_GO_BACK`
 
+---
 
-### Reset
+## Reset
 `$ git checkout BRANCH`
 
 `$ git reset HEAD~1` resets to the grandparent of the HEAD commit
@@ -476,15 +509,18 @@ Choose your commit, copy the hash.
 
 `$ git reset HASH`   resets to the hash's commit
 
-### Revert
+---
+
+## Revert
 `$ git checkout BRANCH`
 
 `$ git revert HEAD^1` reverts to the parent of the HEAD commit
 
 `$ git revert HASH`   reverts to the hash's commit
 
+---
 
-### Stash
+## Stash
 Situation: The phone rings in the middle of your work and you are told you need to make some corrections in another branch. If you are not ready to commit your current work now, you can stash it.
 
 `$ git stash`
@@ -515,8 +551,9 @@ If you want discard a stash you can drop it ...
 
 `$ git stash clear`
 
+---
 
-### Rebase
+## Rebase
 Situation: While you're working on your feature, the main is updated by someone else.
 Now you want to integrate the new main updates into your feature branch.
 With `rebase` you can move branches and merge them in one step into a new base to make the history linear again. 
@@ -531,7 +568,7 @@ If you running in conflicts, use
 `$ git mergetool` to fix them.
 
 
-### Overwrite main with contents of feature branch (feature > main)
+## Overwrite main with contents of feature branch (feature > main)
 `$ git checkout feature    	# source name`
 
 `$ git merge -s ours main  	# target name`
@@ -547,8 +584,9 @@ Situation: You want to delete stale references to remote branches that don't exi
 
 `$ git remote prune origin`
 
+---
 
-### Use a LAN git e. g. Raspberry Pi or home server
+## Use a LAN git e. g. Raspberry Pi or home server
 
 First: On both machines enable and configure ssh !
 
@@ -582,7 +620,9 @@ $ cd /PATH/TO/PROJECT_DIR
 $ git clone --local PROJECT_NAME /PATH/TO/GIT_DIR/PROJECT_NAME.git
 ```
 
-### Delete a git history
+---
+
+## Delete a git history
  1.   Checkout
 
     ```git checkout --orphan latest_branch```
@@ -607,8 +647,9 @@ $ git clone --local PROJECT_NAME /PATH/TO/GIT_DIR/PROJECT_NAME.git
 
     ```git push -f origin main```
 
+---
 
-### Git Tag
+## Git Tag
 Git has the ability to tag specific points in a repository’s history as being important.  
 show tags  
 ```
@@ -639,7 +680,9 @@ v1.4-lw
 v1.5
 ```
 
-### Find and delete files from the repository
+---
+
+## Find and delete files from the repository
 E. g. find .DS_Store files 
 `find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch`
 
@@ -649,7 +692,9 @@ Commit the changes
 Push the changes to GitHub
 `git push origin main`
 
-### Working in two different branches at the same time
+---
+
+## Working in two different branches at the same time
 Create a repository
 
 ```
@@ -716,6 +761,105 @@ git worktree remove ../feature
 
 git push origin main
 ```
+
+---
+
+# 🚀 Git Fast-Forward Rebase & Merge Workflow
+
+## ✨ Goal
+
+Integrate commits from a feature branch (break_test) into a target branch (local_work) using rebase for a linear history and --ff-only merge for a clean fast-forward.
+
+⸻
+
+### ✅ Step-by-step Instructions
+
+1. Switch to target branch and update
+```
+git checkout local_work
+git pull origin local_work  # optional: ensure up-to-date
+```
+2. Rebase the feature branch onto the target
+```
+git checkout break_test
+git rebase local_work
+```
+This re-applies your commits on top of local_work to keep history linear.
+
+If there are conflicts, resolve them and run:
+```
+git rebase --continue
+```
+3. Merge the rebased branch into target (fast-forward only)
+```
+git checkout local_work
+git merge --ff-only break_test
+```
+No merge commit is created – history remains clean.
+
+4. Delete the feature branch
+```
+git branch -d break_test                # local delete
+git push origin --delete break_test     # remote delete (optional)
+```
+5. Push the updated target branch
+```
+git push origin local_work
+```
+
+⸻
+
+🧩 Optional: Reusable Bash Function
+
+Add this to your .bashrc or .zshrc:
+
+# Fast-forward rebase & merge helper
+```
+git_ff_rebase_merge() {
+  if [ "$#" -ne 2 ]; then
+    echo "Usage: git_ff_rebase_merge <from_branch> <into_branch>"
+    return 1
+  fi
+
+  local FROM=$1
+  local INTO=$2
+
+  echo "⚙️ Checking out '$FROM'..."
+  git checkout "$FROM" || return 1
+
+  echo "🔄 Rebasing '$FROM' onto '$INTO'..."
+  git fetch origin "$INTO"
+  git rebase "$INTO" || {
+    echo "❌ Rebase failed. Resolve conflicts and run 'git rebase --continue'."
+    return 1
+  }
+
+  echo "✅ Rebase complete. Now merging into '$INTO' via fast-forward..."
+  git checkout "$INTO" || return 1
+  git merge --ff-only "$FROM" || {
+    echo "❌ Fast-forward merge failed. Something went wrong."
+    return 1
+  }
+
+  echo "🧹 Cleaning up..."
+  git branch -d "$FROM"
+
+  read -p "🌐 Delete remote branch '$FROM'? [y/N] " CONFIRM
+  if [[ "$CONFIRM" =~ ^[Yy]$ ]]; then
+    git push origin --delete "$FROM"
+  else
+    echo "ℹ️ Remote branch '$FROM' not deleted."
+  fi
+
+  echo "✅ Done."
+}
+```
+Usage:
+```
+git_ff_rebase_merge break_test local_work
+```
+This rebases break_test onto local_work, merges it with --ff-only, deletes the branch, and optionally cleans up the remote.
+
 ---
 :information_source: **Info:**   more [here][0] and [here][0]  
 
