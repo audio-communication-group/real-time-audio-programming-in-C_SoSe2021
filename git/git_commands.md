@@ -856,9 +856,9 @@ git_ff_rebase_merge() {
 ```
 Usage:
 ```
-git_ff_rebase_merge break_test local_work
+git_ff_rebase_merge bugfix develop
 ```
-This rebases break_test onto local_work, merges it with --ff-only, deletes the branch, and optionally cleans up the remote.
+This rebases bugfix onto develop, merges it with --ff-only, deletes the branch, and optionally cleans up the remote.
 
 ---
 :information_source: **Info:**   more [here][0] and [here][0]  
