@@ -861,6 +861,37 @@ git_ff_rebase_merge bugfix develop
 This rebases bugfix onto develop, merges it with --ff-only, deletes the branch, and optionally cleans up the remote.
 
 ---
+## Git: Interactive Patch-Picking (`-p`-Modus)
+
+When you run `git checkout -p` or `git restore -p`, an interactive selection appears for each **hunk** (change block).
+
+First make sure you are in the target branch, then start interactive patching:
+
+```
+git checkout main
+git restore -p --source=<commit-hash/branch> <relative/filepath>
+``
+Here are the possible **commands** for control:
+
+| **Command** | **Meaning**                                                     |
+|--------------|----------------------------------------------------------------|
+| **y**        | Take over this hunk (yes).                                     |
+| **n**        | Skip this hunk (no).                                           |
+| **q**        | Cancel – do not display or accept any more hunks.              |
+| **a**        | Accept all remaining hunks of this file (automatically "yes"). |
+| **d**        | Skip all remaining hunks of this file (automatically "no").    |
+| **j**        | Jump to the next hunk.                                         |
+| **J**        | Jump to the previous hunk.                                     |
+| **g**        | Go directly to a specific hunk (prompt follows).               |
+| **/**        | Look for a pattern in the hunks.                               |
+| **s**        | Split the hunk into smaller sections.                          |
+| **e**        | Edit this hunk manually (opens editor).                        |
+| **?**        | Displays this help table.                                      |
+
+**💡 Tipp:** Besonders nützlich sind `s` (Split) für noch feinere Auswahl und `e` (Edit) für manuelles Eingreifen!
+
+---
+---
 :information_source: **Info:**   more [here][0] and [here][0]  
 
 to be continued...
